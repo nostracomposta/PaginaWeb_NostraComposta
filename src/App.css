@@ -1,3 +1,6 @@
+/* ==========================================
+   1. GLOBAL & RESET BASE
+   ========================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +10,14 @@
 body, html {
   width: 100%;
   overflow-x: hidden;
+}
+
+.landing-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 90px;
 }
 
 .counter {
@@ -194,19 +205,14 @@ body, html {
   }
 }
 
-.landing-page {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-top: 90px;
-}
 
-/* NAVBAR */
+/* ==========================================
+   2. NAVBAR & NAVEGACIÓN
+   ========================================== */
 .navbar {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -244,24 +250,34 @@ body, html {
   border-bottom-color: var(--primary-olive);
 }
 
-/* BOTÓN DERECHO DE NAVEGACIÓN (INSCRÍBETE) */
+.nav-link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  border-bottom-color: var(--primary-olive);
+}
+
+/* Botón Inscríbete (Navbar) */
 .btn-primary {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-
-  /* Dimensiones y espaciado (más grande) */
   padding: 18px 32px;
   min-width: 180px;
   box-sizing: border-box;
 
-  /* Colores y fondo */
   background: var(--color-surface-button-on-button, #918757);
   color: var(--color-text-on-button-default, #FFFFF3) !important;
   text-decoration: none;
 
-  /* Tipografía */
   font-family: 'Work Sans', sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -269,12 +285,10 @@ body, html {
   text-align: center;
   white-space: nowrap;
 
-  /* Bordes y Sombra */
   border: none;
   border-radius: 14px;
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
 
-  /* Interacción */
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
 }
@@ -301,7 +315,11 @@ body, html {
   background: #c3beaa;
 }
 
-/* HERO BANNER */
+
+/* ==========================================
+   3. SECCIÓN HOME / INICIO
+   ========================================== */
+/* Hero Banner */
 .hero-image-container img {
   width: 100%;
   height: 480px;
@@ -309,12 +327,12 @@ body, html {
   display: block;
 }
 
-/* HIGHLIGHT CARD (¿Qué es Nostra Composta?) */
+/* Highlight Card (¿Qué es Nostra Composta?) */
 .highlight-section {
   width: 100%;
   max-width: none; 
   margin: -60px 0 40px 0;
-  padding: 0 40px; 
+  padding: 0 32px; 
   position: relative;
   z-index: 10;
   box-sizing: border-box;
@@ -336,7 +354,7 @@ body, html {
   font-size: 2.5rem;
   max-width: 320px;
   line-height: 1.2;
-  color:#FFFFF3;
+  color: #FFFFF3;
 }
 
 .highlight-card p {
@@ -345,7 +363,7 @@ body, html {
   font-weight: 10;
   font-size: 20;
   line-height: 1.6;
-  color:#FFFFF3;
+  color: #FFFFF3;
 }
 
 .highlight-cta {
@@ -357,13 +375,13 @@ body, html {
   padding-left: 36px;
 }
 
-/* PROBLEMA */
+/* Problema */
 .problem-section {
   width: 100%;
   max-width: none;
   margin: 60px 0;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 
 .problem-section h2 {
@@ -380,7 +398,7 @@ body, html {
   margin: 0 auto;
 }
 
-/* CÓMO FUNCIONA */
+/* Cómo Funciona (Landing) */
 .how-it-works-section {
   width: 100%;
   max-width: none;
@@ -389,7 +407,7 @@ body, html {
   align-items: center;
   justify-content: space-between; 
   gap: 140px;
-  padding: 0 40px;
+  padding: 0 32px;
   box-sizing: border-box;
 }
 
@@ -450,7 +468,208 @@ body, html {
   object-fit: cover;
 }
 
-/* SERVICIOS */
+/* Final CTA */
+.final-cta {
+  text-align: center;
+  margin: 60px 20px 100px;
+}
+
+.final-cta h2 {
+  color: var(--primary-olive);
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   SECCIÓN: NOSOTROS
+   ========================================= */
+
+.about-section {
+  width: 100%;
+  max-width: none;
+  margin: 60px 0 100px 0;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+/* 1. Tarjeta Introductoria */
+.about-intro-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 24px 32px;
+  border: 2px solid var(--secondary-amber);
+  border-radius: 24px;
+  background-color: var(--bg-main);
+}
+
+.about-intro-img {
+  width: 480px;
+  max-width: 45%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.about-intro-text {
+  flex: 1;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.about-intro-text strong {
+  font-weight: 600;
+}
+
+/* 2. Problemática y Tarjetas de Impacto */
+.problem-block {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.problem-banner {
+  background-color: var(--primary-olive);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://placehold.co/1376x270');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding: 64px 32px;
+  text-align: center;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.problem-banner h2 {
+  color: var(--text-light);
+  font-size: 2.6rem;
+  line-height: 1.25;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.impact-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: -30px; /* Superposición sutil con el banner */
+  padding: 0 20px;
+}
+
+.impact-card {
+  background: var(--primary-olive);
+  color: var(--text-light);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  max-width: 1000px;
+  margin: 16px auto 0;
+}
+
+/* 3. Nostra Solución */
+.solution-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.solution-block h2 {
+  color: var(--primary-olive);
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.solution-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+.solution-card {
+  background-color: var(--accent-rose);
+  padding: 24px;
+  border-radius: 16px;
+  min-height: 200px;
+  display: flex;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.solution-card-inner {
+  border: 1px solid var(--border-muted);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+/* 4. Filosofía y Valores Banners */
+.about-banner-card {
+  height: 180px;
+  border-radius: 20px;
+  border: 2px solid var(--primary-olive);
+  background-color: #f0ede1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.about-banner-card h2 {
+  color: var(--primary-olive);
+  font-size: 2.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .about-intro-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-intro-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .impact-cards-container {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+/* ==========================================
+   5. SECCIÓN SERVICIOS
+   ========================================== */
 .services-section {
   width: 100%;
   max-width: none;
@@ -497,236 +716,6 @@ body, html {
   justify-content: center;
 }
 
-/* FINAL CTA */
-.final-cta {
-  text-align: center;
-  margin: 60px 20px 100px;
-}
-
-.final-cta h2 {
-  color: var(--primary-olive);
-  font-size: 2rem;
-  margin-bottom: 24px;
-}
-
-/* FOOTER */
-.footer {
-  background: var(--primary-olive);
-  color: var(--text-light);
-  padding: 48px 40px;
-}
-
-.footer-content {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-}
-
-.footer-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.footer-item strong {
-  display: block;
-  font-size: 1.1rem;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .highlight-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .highlight-cta {
-    border-left: none;
-    padding-left: 0;
-  }
-  .how-it-works-section {
-    flex-direction: column;
-  }
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 1.1rem;
-  padding: 6px 12px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.nav-link.active,
-.nav-link:hover {
-  border-bottom-color: var(--primary-olive);
-}
-
-.section-container {
-  width: 100%;
-  background-color: var(--color-surface-background-background, #FFFFF3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-/* Títulos Globales */
-.section-title {
-  text-align: center;
-  color: var(--color-text-link-default, #918757);
-  font-size: 48px;
-  font-family: 'Tenor Sans', sans-serif;
-  font-weight: 400;
-  line-height: 58px;
-  margin-bottom: 32px;
-}
-
-/* PASOS PASO A PASO */
-.how-it-works-steps {
-  width: 100%;
-  max-width: 1376px;
-  padding: 60px 32px 32px;
-  box-sizing: border-box;
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 53px;
-}
-
-.step-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-}
-
-.icon-wrapper {
-  width: 60px;
-  height: 60px;
-  position: relative;
-}
-
-/* Dibujos SVG/Vectores de Figma */
-.step-icon-custom {
-  position: absolute;
-  border-color: var(--color-icons-on-button-disabled, #918757);
-}
-
-.icon-1-1 { width: 15px; height: 15px; left: 22.5px; top: 12.5px; border-radius: 9999px; border: 1px solid #918757; }
-.icon-1-2 { width: 12.5px; height: 12.5px; left: 32.5px; top: 12.5px; border-radius: 9999px; border: 1px solid #918757; }
-.icon-1-3 { width: 12.5px; height: 12.5px; left: 27.5px; top: 25px; transform: rotate(180deg); transform-origin: top left; border-radius: 9999px; border: 1px solid #918757; }
-.icon-1-4 { width: 27.5px; height: 15px; left: 16.25px; top: 31.25px; border-radius: 1.8px; outline: 1px solid #918757; outline-offset: -0.5px; }
-
-.icon-2-1 { width: 7.51px; height: 1.19px; left: 25px; top: 40px; transform: rotate(-108deg); transform-origin: top left; outline: 1px solid #918757; }
-.icon-2-2 { width: 7.51px; height: 1.19px; left: 33.88px; top: 39.63px; transform: rotate(-72deg); transform-origin: top left; outline: 1px solid #918757; }
-.icon-2-3 { width: 50px; height: 27.5px; left: 5px; top: 22.5px; outline: 1px solid #918757; outline-offset: -0.5px; }
-
-.icon-3-1 { width: 42.5px; height: 15px; left: 8.75px; top: 38.75px; border-radius: 9999px; outline: 1px solid #918757; }
-.icon-3-2 { width: 37.5px; height: 42.5px; left: 11.25px; top: 6.25px; outline: 1px solid #918757; }
-.icon-3-3 { width: 20px; height: 20px; left: 20px; top: 15px; border-radius: 9999px; border: 1px solid #918757; }
-
-.icon-4-1 { width: 15px; height: 30px; left: 22.5px; top: 5px; outline: 1px solid #918757; }
-.icon-4-2 { width: 15px; height: 30px; left: 50.98px; top: 22.5px; transform: rotate(60deg); transform-origin: top left; outline: 1px solid #918757; }
-.icon-4-3 { width: 15px; height: 30px; left: 35px; top: 37.5px; transform: rotate(120deg); transform-origin: top left; outline: 1px solid #918757; }
-
-.step-title {
-  color: var(--color-text-heading-black, #191919);
-  font-size: 32px;
-  font-family: 'Tenor Sans', sans-serif;
-  font-weight: 400;
-  line-height: 36px;
-  margin: 0;
-}
-
-.step-description {
-  color: var(--color-text-heading-black, #191919);
-  font-size: 20px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 0;
-}
-
-.step-badge {
-  color: var(--color-text-heading-white, #FFFFF3);
-  font-size: 18px;
-  font-family: 'Work Sans', sans-serif;
-  background-color: #BF7C4B;
-  padding: 6px 12px;
-  border-radius: 8px;
-  margin-top: 4px;
-}
-
-/* SECCIÓN PRECIOS */
-.pricing-section {
-  width: 100%;
-  max-width: 1376px;
-  padding: 24px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  box-sizing: border-box;
-}
-
-.pricing-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.pricing-card {
-  flex: 1 1 500px;
-  padding: 16px;
-  border-radius: 24px;
-  outline: 1px #BF7C4B solid;
-  outline-offset: -1px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.pricing-badge {
-  padding: 16px;
-  background: var(--color-surface-background-acento-ambar, #BF7C4B);
-  border-radius: 24px;
-  color: var(--color-text-heading-white, #FFFFF3);
-  font-size: 28px;
-  font-family: 'Tenor Sans', sans-serif;
-  text-align: center;
-  min-width: 200px;
-}
-
-.pricing-details {
-  display: flex;
-  gap: 20px;
-  color: var(--color-text-heading-black, #191919);
-  font-size: 18px;
-  font-family: 'Work Sans', sans-serif;
-  line-height: 24px;
-}
-
-.acopio-note {
-  width: 100%;
-  text-align: right;
-  color: var(--color-text-heading-black, #191919);
-  font-size: 18px;
-  font-family: 'Work Sans', sans-serif;
-  margin-top: 12px;
-}
-
-/* SERVICIOS */
 .services-list-section {
   width: 100%;
   max-width: 1376px;
@@ -808,70 +797,10 @@ body, html {
   cursor: pointer;
 }
 
-/* FOOTER */
-.main-footer {
-  width: 100%;
-  background: var(--color-surface-background-primary, #918757);
-  padding: 40px 32px;
-  box-sizing: border-box;
-  margin-top: 60px;
-}
 
-.footer-container {
-  max-width: 1331px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.footer-logo {
-  width: 250px;
-  height: auto;
-  object-fit: contain;
-}
-
-.footer-contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.contact-title {
-  color: var(--color-text-heading-white, #FFFFF3);
-  font-size: 20px;
-  font-family: 'Work Sans', sans-serif;
-  margin: 0;
-}
-
-.contact-value {
-  color: var(--color-text-on-button-default, #FFFFF3);
-  font-size: 18px;
-  font-family: 'Work Sans', sans-serif;
-  margin: 0;
-}
-
-.footer-brand {
-  color: white;
-  font-size: 24px;
-  font-family: 'Work Sans', sans-serif;
-}
-
+/* ==========================================
+   6. SECCIÓN RECOLECCIÓN
+   ========================================== */
 .recoleccion-container {
   width: 100%;
   background-color: var(--color-surface-background-background, #FFFFF3);
@@ -879,11 +808,10 @@ body, html {
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  padding: 40px 20px 80px;
+  padding: 40px 32px 80px 32px  ;
   box-sizing: border-box;
 }
 
-/* TITULOS */
 .recoleccion-main-title {
   color: var(--color-text-link-default, #918757);
   font-size: 48px;
@@ -894,7 +822,6 @@ body, html {
   margin: 0;
 }
 
-/* BOTONES GRANDES */
 .btn-olive-big {
   padding: 12px 24px;
   background: var(--color-surface-button-on-button, #918757);
@@ -908,24 +835,6 @@ body, html {
   transition: transform 0.2s ease;
 }
 
-.btn-amber-big {
-  padding: 12px 24px;
-  background: var(--color-surface-background-acento-ambar, #BF7C4B);
-  box-shadow: 4px 5px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  border: none;
-  color: var(--color-text-on-button-default, #FFFFF3);
-  font-size: 36px;
-  font-family: 'Tenor Sans', sans-serif;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.btn-olive-big:hover, .btn-amber-big:hover {
-  transform: translateY(-2px);
-}
-
-/* SECCION GUIA */
 .recoleccion-guide-section {
   display: flex;
   flex-direction: column;
@@ -954,7 +863,6 @@ body, html {
   margin: 0;
 }
 
-/* SECCION SOLICITA */
 .recoleccion-request-section {
   display: flex;
   flex-direction: column;
@@ -984,7 +892,7 @@ body, html {
   padding-left: 20px;
 }
 
-/* SECCION COSTOS Y TABLAS */
+/* Tablas de Costos */
 .costs-section {
   display: flex;
   flex-direction: column;
@@ -1064,7 +972,7 @@ body, html {
   line-height: 36px;
 }
 
-/* BANNERS */
+/* Banners Compostables */
 .banners-section {
   display: flex;
   flex-direction: column;
@@ -1102,7 +1010,7 @@ body, html {
   background-color: rgba(191, 124, 75, 0.1);
 }
 
-/* OTROS RESIDUOS */
+/* Otros Residuos */
 .other-waste-section {
   display: flex;
   flex-direction: column;
@@ -1174,6 +1082,10 @@ body, html {
   margin-top: 20px;
 }
 
+
+/* ==========================================
+   7. SECCIÓN INSCRÍBETE
+   ========================================== */
 .inscribete-container {
   width: 100%;
   background-color: var(--color-surface-background-background, #FFFFF3);
@@ -1181,11 +1093,10 @@ body, html {
   flex-direction: column;
   align-items: center;
   gap: 80px;
-  padding: 40px 20px 80px;
+  padding: 40px 32px 80px 32px;
   box-sizing: border-box;
 }
 
-/* TÍTULOS */
 .inscribete-title {
   color: var(--color-text-link-default, #918757);
   font-size: 48px;
@@ -1196,7 +1107,6 @@ body, html {
   margin: 0;
 }
 
-/* SECCIÓN PRINCIPAL HERO */
 .inscribete-hero-section {
   display: flex;
   flex-direction: column;
@@ -1216,7 +1126,6 @@ body, html {
   margin: 0;
 }
 
-/* BOTÓN ÁMBAR */
 .btn-amber-big {
   padding: 12px 24px;
   background: var(--color-surface-background-acento-ambar, #BF7C4B);
@@ -1230,12 +1139,15 @@ body, html {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.btn-amber-big:hover {
+.btn-amber-big:hover, .btn-olive-big:hover {
   transform: translateY(-2px);
+}
+
+.btn-amber-big:hover {
   background: #a86b3f;
 }
 
-/* CARRUSEL FLUIDO */
+/* Carrusel */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -1297,7 +1209,7 @@ body, html {
   right: 20px;
 }
 
-/* SECCIÓN MAPA / RUTAS */
+/* Rutas de Recolección */
 .routes-section {
   display: flex;
   flex-direction: column;
@@ -1323,7 +1235,122 @@ body, html {
   display: block;
 }
 
-/* ADAPTABILIDAD PARA MÓVILES */
+
+/* ==========================================
+   8. FOOTER GLOBAL
+   ========================================== */
+.footer {
+  background: var(--primary-olive);
+  color: var(--text-light);
+  padding: 48px 40px;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-item strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.main-footer {
+  width: 100%;
+  background: var(--color-surface-background-primary, #918757);
+  padding: 40px 32px;
+  box-sizing: border-box;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1331px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-title {
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+}
+
+.contact-value {
+  color: var(--color-text-on-button-default, #FFFFF3);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+}
+
+.footer-brand {
+  color: white;
+  font-size: 24px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+/* ==========================================
+   9. MEDIA QUERIES & RESPONSIVE
+   ========================================== */
+@media (max-width: 900px) {
+  .highlight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .highlight-cta {
+    border-left: none;
+    padding-left: 0;
+  }
+  .how-it-works-section {
+    flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .inscribete-title {
     font-size: 32px;

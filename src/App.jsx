@@ -7,6 +7,7 @@ import Servicios from './pages/Servicios';
 import Recoleccion from './pages/Recolección';
 import Inscribete from './pages/Inscribete';
 import './App.css';
+import './index.css';
 
 function App() {
   return (

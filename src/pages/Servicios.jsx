@@ -159,44 +159,6 @@ export default function Servicios() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="main-footer">
-        <div className="footer-container">
-          <div className="footer-left">
-            <img className="footer-logo" src="https://placehold.co/300x344" alt="Nostra Composta" />
-            
-            <div className="footer-contacts-list">
-              <div className="footer-contact-item">
-                <div className="contact-icon icon-location" />
-                <div>
-                  <h4 className="contact-title">Ubicación</h4>
-                  <p className="contact-value">León, Guanajuato, México</p>
-                </div>
-              </div>
-
-              <div className="footer-contact-item">
-                <div className="contact-icon icon-whatsapp" />
-                <div>
-                  <h4 className="contact-title">WhatsApp</h4>
-                  <p className="contact-value">477-6996-923</p>
-                </div>
-              </div>
-
-              <div className="footer-contact-item">
-                <div className="contact-icon icon-instagram" />
-                <div>
-                  <h4 className="contact-title">Instagram</h4>
-                  <p className="contact-value">@nostra.composta</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="footer-brand">
-            Nostra Composta
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
