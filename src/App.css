@@ -319,6 +319,15 @@ body, html {
 /* ==========================================
    3. SECCIÓN HOME / INICIO
    ========================================== */
+
+.section-container {
+  width: 100%;
+  background-color: var(--color-surface-background-background, #FFFFF3);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los hijos horizontales */
+  box-sizing: border-box;
+}
 /* Hero Banner */
 .hero-image-container img {
   width: 100%;
@@ -1367,4 +1376,245 @@ body, html {
     height: 40px;
     font-size: 16px;
   }
+}
+
+
+/* ==========================================
+   5. SECCIÓN SERVICIOS (COMPONENTES & VISTAS)
+   ========================================== */
+
+/* Título de Sección Común */
+.section-title {
+  text-align: center;
+  color: var(--color-text-link-default, #918757);
+  font-size: 48px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  line-height: 58px;
+  margin-bottom: 32px;
+}
+
+/* --- Subsección: ¿Cómo Funciona? (Pasos con Iconos) --- */
+.how-it-works-steps {
+  width: 100%;
+  max-width: 1376px;
+  padding: 60px 0 32px;
+  box-sizing: border-box;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.step-icon-custom {
+  position: absolute;
+  border-color: var(--color-icons-on-button-disabled, #918757);
+}
+
+.icon-1-1 { width: 15px; height: 15px; left: 22.5px; top: 12.5px; border-radius: 9999px; border: 1px solid #918757; }
+.icon-1-2 { width: 12.5px; height: 12.5px; left: 32.5px; top: 12.5px; border-radius: 9999px; border: 1px solid #918757; }
+.icon-1-3 { width: 12.5px; height: 12.5px; left: 27.5px; top: 25px; transform: rotate(180deg); transform-origin: top left; border-radius: 9999px; border: 1px solid #918757; }
+.icon-1-4 { width: 27.5px; height: 15px; left: 16.25px; top: 31.25px; border-radius: 1.8px; outline: 1px solid #918757; outline-offset: -0.5px; }
+
+.icon-2-1 { width: 7.51px; height: 1.19px; left: 25px; top: 40px; transform: rotate(-108deg); transform-origin: top left; outline: 1px solid #918757; }
+.icon-2-2 { width: 7.51px; height: 1.19px; left: 33.88px; top: 39.63px; transform: rotate(-72deg); transform-origin: top left; outline: 1px solid #918757; }
+.icon-2-3 { width: 50px; height: 27.5px; left: 5px; top: 22.5px; outline: 1px solid #918757; outline-offset: -0.5px; }
+
+.icon-3-1 { width: 42.5px; height: 15px; left: 8.75px; top: 38.75px; border-radius: 9999px; outline: 1px solid #918757; }
+.icon-3-2 { width: 37.5px; height: 42.5px; left: 11.25px; top: 6.25px; outline: 1px solid #918757; }
+.icon-3-3 { width: 20px; height: 20px; left: 20px; top: 15px; border-radius: 9999px; border: 1px solid #918757; }
+
+.icon-4-1 { width: 15px; height: 30px; left: 22.5px; top: 5px; outline: 1px solid #918757; }
+.icon-4-2 { width: 15px; height: 30px; left: 50.98px; top: 22.5px; transform: rotate(60deg); transform-origin: top left; outline: 1px solid #918757; }
+.icon-4-3 { width: 15px; height: 30px; left: 35px; top: 37.5px; transform: rotate(120deg); transform-origin: top left; outline: 1px solid #918757; }
+
+.step-title {
+  color: var(--color-text-heading-black, #191919);
+  font-size: 32px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 0;
+}
+
+.step-description {
+  color: var(--color-text-heading-black, #191919);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.step-badge {
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #BF7C4B;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+/* --- Subsección: Precios y Planes --- */
+.pricing-section {
+  width: 100%;
+  max-width: 1376px;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pricing-card {
+  flex: 1 1 500px;
+  padding: 16px;
+  border-radius: 24px;
+  outline: 1px #BF7C4B solid;
+  outline-offset: -1px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #FFFFF3;
+}
+
+.pricing-badge {
+  padding: 16px;
+  background: var(--color-surface-background-acento-ambar, #BF7C4B);
+  border-radius: 24px;
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 28px;
+  font-family: 'Tenor Sans', sans-serif;
+  text-align: center;
+  min-width: 200px;
+}
+
+.pricing-details {
+  display: flex;
+  gap: 20px;
+  color: var(--color-text-heading-black, #191919);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 24px;
+}
+
+.acopio-note {
+  width: 100%;
+  text-align: right;
+  color: var(--color-text-heading-black, #191919);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 12px;
+}
+
+/* --- Subsección: Banners de Servicios --- */
+.services-list-section {
+  width: 100%;
+  max-width: 1376px;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.services-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-banner-card {
+  width: 100%;
+  padding: 20px;
+  background: var(--color-surface-background-primary, #918757);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.service-banner-img {
+  flex: 1 1 300px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-banner-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.service-banner-title {
+  color: var(--color-text-body-white, #FFFFF3);
+  font-size: 32px;
+  font-family: 'Tenor Sans', sans-serif;
+  margin: 0;
+}
+
+.service-banner-subtitle {
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.service-banner-divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #FFFFF3;
+  margin: 4px 0;
+}
+
+.service-banner-desc {
+  color: var(--color-text-body-white, #FFFFF3);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 24px;
+  margin: 0;
+}
+
+.service-banner-btn {
+  padding: 10px 22px;
+  background: var(--color-surface-button-on-button-hover-light, #D3CFBC);
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: none;
+  color: var(--color-text-link-hover, #575134);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.service-banner-btn:hover {
+  background: #c2beab;
+  transform: translateY(-2px);
 }
