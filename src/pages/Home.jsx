@@ -3,7 +3,7 @@ function Home() {
     { title: 'Hogar Nostra Composta', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
     { title: 'Empresa Nostra Composta', btnText: 'Cotiza ahora', img: 'https://placehold.co/286x222' },
     { title: 'Taller de composta', btnText: 'Cotiza ahora', img: 'https://placehold.co/286x222' },
-    { title: 'Servicio POOPIS', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
+    { title: 'Servicio \n POOPIS', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
   ];
 
   return (
