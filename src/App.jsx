@@ -1,19 +1,22 @@
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Nosotros from './pages/Nosotros';
-import Servicios from './pages/Servicios';
-import Recoleccion from './pages/Recolección';
-import Inscribete from './pages/Inscribete';
-import './App.css';
-import './index.css';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+import NavBar from './components/Navbar'
+import Footer from './components/Footer'
+
+// Páginas
+import Home from './pages/Home'
+import Nosotros from './pages/Nosotros'
+import Servicios from './pages/Servicios'
+import Recoleccion from './pages/Recoleccion'
+import Inscribete from './pages/Inscribete'
 
 function App() {
   return (
-    <div className="landing-page">
+    <>
+      <ScrollToTop />
       <NavBar />
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
@@ -23,8 +26,8 @@ function App() {
       </Routes>
 
       <Footer />
-    </div>
-  );
+    </>
+  )
 }
 
-export default App;
+export default App
