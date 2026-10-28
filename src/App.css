@@ -297,7 +297,7 @@ body, html {
 .btn-primary:hover {
   background: #7c7349;
   color: var(--color-text-on-button-default, #FFFFF3) !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .btn-light {
@@ -404,7 +404,7 @@ body, html {
   justify-content: center;
   gap: 8px; /* <--- 2. GAP DE 24px entre el texto "¿Te interesa?" y el botón "¡Inscríbete!" */
   
-  border-left: 1px solid var(--color-icons-white, #FFFFF3); /* Separador vertical */
+  border-left: 1px solid var(--color-icons-white, #fffff376); /* Separador vertical */
   
   margin-left: 0;
   padding-left: 24px;
@@ -415,11 +415,12 @@ body, html {
 }
 
 .highlight-cta span {
-  color: #FFFFFF;
+  color: var(--color-text-heading-white, #FFFFF3);
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
 }
 
 /* Botón ¡Inscríbete! */
@@ -439,12 +440,13 @@ body, html {
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.1s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .highlight-btn:hover {
   background: #c3beaa;
-  transform: translateY(-1px);
+  transform: translateY(-2px); /* Eleva el botón 3px hacia arriba */
+  box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta ligeramente la sombra para acentuar la elevación */
 }
 
 /* Problema */
@@ -782,6 +784,13 @@ body, html {
   gap: 16px;
   box-sizing: border-box;
   margin: 0 auto;
+
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+  .service-card:hover {
+  background-color: #BF7C4B; /* <--- Cambia este valor al color que prefieras al pasar el cursor */
+  transform: translateY(-4px); /* (Opcional) Eleva ligeramente la tarjeta */
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 /* Imagen superior */
@@ -811,6 +820,7 @@ body, html {
   text-align: center;
   margin: 0;
   word-wrap: break-word;
+  white-space: pre-line;
 }
 
 /* Divisor horizontal delgado */
@@ -835,12 +845,18 @@ body, html {
   font-weight: 400;
   line-height: 24px;
   cursor: pointer;
+  
+  text-decoration: none; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   transition: transform 0.1s ease, background 0.2s ease;
 }
 
 .service-card-btn:hover {
   background: #c3beaa;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 /* ==========================================
@@ -870,6 +886,14 @@ body, html {
   align-items: center;
   gap: 24px;
   box-sizing: border-box;
+
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.service-banner-card:hover {
+  background-color: #BF7C4B; /* <--- Cambia este valor al color que prefieras al pasar el cursor */
+  transform: translateY(-4px); /* (Opcional) Eleva ligeramente la tarjeta */
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 .service-banner-img {
@@ -963,6 +987,12 @@ body, html {
   font-family: 'Tenor Sans', sans-serif;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.btn-olive-big:hover {
+  background: #7c7349;
+  color: var(--color-text-on-button-default, #FFFFF3) !important;
+  transform: translateY(-2px);
 }
 
 .recoleccion-guide-section {
@@ -1369,80 +1399,78 @@ body, html {
 /* ==========================================
    8. FOOTER GLOBAL
    ========================================== */
-.footer {
-  background: var(--primary-olive);
-  color: var(--text-light);
-  padding: 32px 40px;
-}
-
-.footer-content {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 32px;
-}
-
-.footer-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.footer-item strong {
-  display: block;
-  font-size: 1.1rem;
-}
-
 .main-footer {
   width: 100%;
   background: var(--color-surface-background-primary, #918757);
-  padding: 40px 32px;
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   box-sizing: border-box;
-  margin-top: 80px;
 }
 
 .footer-container {
+  width: 100%;
   max-width: 1331px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 32px;
+  box-sizing: border-box;
 }
 
 .footer-left {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 32px;
-  flex-wrap: wrap;
 }
 
+/* Logo de 300x344 */
 .footer-logo {
   width: 300px;
   height: 344px;
   object-fit: contain;
 }
 
+/* Columna de contactos con ancho de 282px y gap de 45px entre ítems */
 .footer-contacts-list {
+  width: 282px;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 45px;
 }
 
 .footer-contact-item {
   display: flex;
-  align-items: left;
-  gap: 12px;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Contenedor de iconos svg o personalizados de 50x50 */
+.contact-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .contact-title {
   color: var(--color-text-heading-white, #FFFFF3);
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
   margin: 0;
 }
 
@@ -1450,15 +1478,18 @@ body, html {
   color: var(--color-text-on-button-default, #FFFFF3);
   font-size: 18px;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 22px;
   margin: 0;
 }
 
 .footer-brand {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
 }
-
 
 /* ==========================================
    9. MEDIA QUERIES & RESPONSIVE
@@ -1739,4 +1770,11 @@ body, html {
 .service-banner-btn:hover {
   background: #c2beab;
   transform: translateY(-2px);
+}
+
+a.service-card-btn,
+a.service-banner-btn,
+a.btn-primary,
+a.highlight-btn {
+  text-decoration: none !important;
 }

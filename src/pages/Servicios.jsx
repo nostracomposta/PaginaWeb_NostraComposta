@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 export default function Servicios() {
@@ -111,7 +112,9 @@ export default function Servicios() {
               <p className="service-banner-desc">
                 ¡Lleva el compostaje a tu casa! Te damos tu kit, recolectamos tus residuos orgánicos y los transformamos en composta.
               </p>
-              <button className="service-banner-btn">Inscríbete</button>
+              <Link to="/inscribete" className="service-banner-btn">
+                Inscríbete
+              </Link>
             </div>
           </div>
 
@@ -153,12 +156,13 @@ export default function Servicios() {
               <p className="service-banner-desc">
                 Dale un mejor destino a los residuos de tu mascota. Una alternativa para aprovechar sus desechos de manera responsable y contribuir a un entorno más limpio.
               </p>
-              <button className="service-banner-btn">Inscríbete</button>
+              <Link to="/inscribete" className="service-banner-btn">
+                Inscríbete
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

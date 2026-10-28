@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Home() {
   const services = [
     { title: 'Hogar Nostra Composta', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
@@ -24,8 +25,10 @@ function Home() {
           </p>
           <div className="highlight-cta">
             <span>¿Te interesa?</span>
-            <button className="btn-light">¡Inscríbete!</button>
-          </div>
+           <Link to="/inscribete" className="highlight-btn">
+            ¡Inscríbete!
+          </Link>
+        </div>
         </div>
       </section>
 
@@ -78,20 +81,27 @@ function Home() {
             <div key={idx} className="service-card">
               <img src={item.img} alt={item.title} />
               <h3>{item.title}</h3>
-              <button className="btn-light">{item.btnText}</button>
-            </div>
-          ))}
+              <div className="service-card-divider"></div>
+              {item.btnText.includes('Inscríbete') ? (
+               <Link to="/inscribete" className="service-card-btn">
+                {item.btnText}
+               </Link>
+              ) : (
+               <button className="service-card-btn">{item.btnText}</button>
+              )}
+             </div>
+            ))}
         </div>
       </section>
 
       {/* FINAL CTA */}
       <section className="final-cta">
         <h2>Devuelve a la tierra lo que viene de ella.<br/>¡Únete a Nostra Composta!</h2>
-        <button className="btn-primary" style={{ fontSize: '1.4rem', padding: '12px 32px' }}>
-          Inscríbete
-        </button>
+        <Link to="/inscribete" className="btn-primary" style={{ fontSize: '1.4rem', padding: '12px 32px' }}>
+         Inscríbete
+        </Link>
       </section>
-    </main>
+      </main>
   );
 }
 
