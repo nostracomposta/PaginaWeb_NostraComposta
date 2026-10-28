@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
-import NavBar from './components/Navbar'
+import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 
 // Páginas
