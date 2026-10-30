@@ -720,42 +720,133 @@ body, html {
 }
 
 /* 4. Filosofía y Valores Banners */
-.about-banner-card {
+
+/* Contenedor que agrupa ambos banners si están lado a lado (opcional) */
+.about-banners-container {
+  display: flex;
+  gap: 80px;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column; /* Para que bajen en móviles */
+  align-items: stretch; /* Asegura que ambos banners tengan la misma altura */
+}
+
+/* Envoltorio individual para manejar el hover sin afectar el layout */
+.about-banner-wrapper {
+  flex: 1 1 100%; /* Permite que ambos banners crezcan equitativamente */
+  width: 100%;
+  height: 225px;
+  min-width: 300px;
   height: 180px;
-  border-radius: 20px;
-  border: 2px solid var(--primary-olive);
-  background-color: #f0ede1;
-  background-size: cover;
-  background-position: center;
+  cursor: default;
+}
+
+/* Clase base compartida para ambos estados (normal y hover) */
+.about-banner-card {
+  width: 100%;
+  height: 225px;
+  border-radius: 24px; /* <--- Actualizado a 24px según Figma */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease; /* Transición suave entre cambios de componente */
+}
+
+/* -----------------------------------
+   ESTADO NORMAL (Con Imagen de Fondo)
+   ----------------------------------- */
+.banner-default-state {
+  border: 2px solid var(--color-border-default, #918757);
+  background-color: #f0ede1;
+  background-size: cover;
+  background-position: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.about-banner-card h2 {
-  color: var(--primary-olive);
+.banner-default-state h2 {
+  color: var(--color-text-heading-default, #918757);
   font-size: 2.5rem;
+  margin: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 960px) {
-  .about-intro-card {
-    flex-direction: column;
-    text-align: center;
-  }
+/* Fondos específicos (ajusta las URLs a tus imágenes) */
+.banner-filosofia {
+  /* background-image: url('tu-imagen-filosofia.jpg'); */
+}
 
-  .about-intro-img {
-    width: 100%;
-    max-width: 100%;
-  }
+.banner-valores {
+  /* background-image: url('tu-imagen-valores.jpg'); */
+}
 
-  .impact-cards-container {
-    grid-template-columns: 1fr;
-    margin-top: 0;
-    padding: 0;
-  }
+/* -----------------------------------
+   ESTADO HOVER (Información de Figma)
+   ----------------------------------- */
+.banner-hover-state {
+  padding: 0 32px;
+  background: var(--color-surface-background-primary, #918757);
+  outline: 1px solid var(--color-icons-white, #FFFFF3);
+  outline-offset: -1px;
+  border: none; /* Elimina el borde de 2px del estado default para usar el outline */
+}
+
+.banner-hover-text {
+  flex: 1 1 0;
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-valores-content {
+  display: flex;
+  flex-direction: row; /* Coloca los 3 valores uno al lado del otro */
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Separación entre columnas según Figma */
+  padding: 16px;
+}
+
+/* Cada columna (valor individual) */
+.valor-item {
+  flex: 1 1 0; /* Distribuye el espacio equitativamente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px; /* Espacio entre el título y el texto del valor */
+  padding: 10px;
+}
+
+/* Título de cada valor (RESPONSABILIDAD COMPARTIDA, etc.) */
+.valor-title {
+  color: #FFFFFF; /* Figma solicita 'white' */
+  font-size: 22px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Descripción de cada valor */
+.valor-text {
+  color: #FFFFFF; /* Figma solicita 'white' */
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  margin: 0;
 }
 
 /* ==========================================

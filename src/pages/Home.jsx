@@ -96,7 +96,7 @@ function Home() {
 
       {/* FINAL CTA */}
       <section className="final-cta">
-        <h2>Devuelve a la tierra lo que viene de ella.<br/>¡Únete a Nostra Composta!</h2>
+        <h2>Devuelve a la tierra lo que viene de ella.<br/>¡Se parte de Nostra Composta!</h2>
         <Link to="/inscribete" className="btn-primary" style={{ fontSize: '1.4rem', padding: '12px 32px' }}>
          Inscríbete
         </Link>

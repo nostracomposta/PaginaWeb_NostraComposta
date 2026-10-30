@@ -1,4 +1,8 @@
+import React, { useState } from 'react';
 function Nosotros() {
+  const [isFilosofiaHovered, setIsFilosofiaHovered] = useState(false);
+  const [isValoresHovered, setIsValoresHovered] = useState(false);
+
   return (
     <main className="about-section">
       {/* Tarjeta Introductoria */}
@@ -69,12 +73,71 @@ function Nosotros() {
       </div>
 
       {/* Banners */}
-      <div className="about-banner-card" style={{ backgroundImage: "url('https://placehold.co/1376x225')" }}>
-        <h2>Nostra filosofía</h2>
-      </div>
+      <div className="about-banners-container">
+        
+        {/* BANNER 1: FILOSOFÍA */}
+        <div 
+          className="about-banner-wrapper"
+          onMouseEnter={() => setIsFilosofiaHovered(true)}
+          onMouseLeave={() => setIsFilosofiaHovered(false)}
+        >
+          {isFilosofiaHovered ? (
+            // Banner que aparece en el Hover (basado en Figma)
+            <div className="about-banner-card banner-hover-state">
+              <p className="banner-hover-text">
+                Trabajamos desde la convicción de que la transformación es colectiva, y que los pequeños actos cotidianos pueden regenerar la tierra y nuestra forma de habitarla. Nos mueve el deseo de hacer fácil lo necesario, de acompañar sin imponer, y de construir una comunidad informada que apueste por la vida.
+              </p>
+            </div>
+          ) : (
+            // Banner por defecto
+            <div className="about-banner-card banner-default-state banner-filosofia">
+              <h2>Nostra Filosofía</h2>
+            </div>
+          )}
+        </div>
 
-      <div className="about-banner-card" style={{ backgroundImage: "url('https://placehold.co/1376x225')" }}>
-        <h2>Nostra valores</h2>
+        {/* BANNER 2: VALORES */}
+        <div 
+          className="about-banner-wrapper"
+          onMouseEnter={() => setIsValoresHovered(true)}
+          onMouseLeave={() => setIsValoresHovered(false)}
+        >
+          {isValoresHovered ? (
+            // Banner que aparece en el Hover (Agrega tu texto de valores aquí)
+            <div className="about-banner-card banner-hover-state banner-valores-content">
+              {/* 1. Responsabilidad Compartida */}
+              <div className="valor-item">
+                <h3 className="valor-title">RESPONSABILIDAD COMPARTIDA</h3>
+                <p className="valor-text">
+                  Promovemos prácticas accesibles y acompañadas para que cada persona pueda participar activamente en la transformación de sus hábitos, desde donde está y con lo que tiene.
+                </p>
+              </div>
+
+              {/* 2. Transparencia */}
+              <div className="valor-item">
+                <h3 className="valor-title">TRANSPARENCIA</h3>
+                <p className="valor-text">
+                  Sabemos que la confianza se construye con información clara y acciones coherentes, compartimos qué pasa con los residuos, cómo los tratamos y por qué elegimos hacerlo así.
+                </p>
+              </div>
+
+              {/* 3. Educar para Transformar */}
+              <div className="valor-item">
+                <h3 className="valor-title">EDUCAR PARA TRANSFORMAR</h3>
+                <p className="valor-text">
+                  Informar, sensibilizar y compartir saberes es parte central de nuestro trabajo, porque creemos que una comunidad informada tiene más herramientas para cambiar el mundo.
+                </p>
+              </div>
+
+            </div>
+          ) : (
+            // Banner por defecto
+            <div className="about-banner-card banner-default-state banner-valores">
+              <h2>Nostra Valores</h2>
+            </div>
+          )}
+        </div>
+
       </div>
     </main>
   );
