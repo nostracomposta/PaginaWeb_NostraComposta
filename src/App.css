@@ -492,13 +492,13 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  gap: 140px;
-  padding: 0 32px;
+  gap: 100px;
+  padding: 0 120px;
   box-sizing: border-box;
 }
 
 .how-info {
-  flex: 0 1 600px; 
+  flex: 0 1 500px; 
   text-align: left; 
 }
 
@@ -544,11 +544,16 @@ body, html {
 }
 
 .how-image-container {
-  flex: 1;
+  flex: 0 1 450px;
+  max-width: 650px; /* Limita el contenedor de la imagen */
+  display: flex;
+  justify-content: center;
 }
 
 .how-image-container img {
   width: 100%;
+  max-width: 650px;
+  max-height: 580px;
   border-radius: 28px;
   border: 2px solid var(--primary-olive);
   object-fit: cover;
