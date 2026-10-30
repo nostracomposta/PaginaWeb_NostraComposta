@@ -34,7 +34,9 @@ export default function Servicios() {
             <p className="step-description">
               Comienza a llenar tu cubeta con los residuos orgánicos de tu hogar.
             </p>
-            <div className="step-badge">Lista de compostables</div>
+            <Link to="/recoleccion#lista-de-compostables" className="step-badge-link">
+             Lista de compostables
+            </Link>
           </div>
 
           {/* Paso 3 */}

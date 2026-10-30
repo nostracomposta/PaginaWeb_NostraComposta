@@ -10,16 +10,38 @@ export default function Recoleccion() {
         <button className="btn-olive-big">Revisa los pasos</button>
 
         <div className="recommendations-box">
-          <h3 className="recommendations-title">Recomendaciones:</h3>
-          <p className="recommendations-text">
-            Pide tu recolección máximo cada 2 semanas, ya que los residuos comienzan a descomponerse y pueden generar olores que atraigan vectores como insectos o larvas a tu cubeta.
-            <br /><br />
-            Mantén tu cubeta siempre cerrada, y si es posible, cubre tus residuos con materia seca, como hojas, periódico o cartón.
-          </p>
+          <div className="recommendations-title">Recomendaciones:</div>
+          
+          <div className="recommendations-list">
+            {/* Primer ítem (Reloj/Calendario) */}
+            <div className="recommendation-item">
+              <div className="recommendation-icon-wrapper">
+                <div className="recommendation-icon-1" />
+              </div>
+              <div className="recommendation-text">
+                Pide tu recolección máximo cada 2 semanas, ya que los residuos comienzan a descomponerse y pueden generar olores que atraigan vectores como insectos o larvas a tu cubeta.
+              </div>
+            </div>
+            
+            {/* Segundo ítem (Cubeta cerrada) */}
+            <div className="recommendation-item">
+              <div className="recommendation-icon-wrapper">
+                <div className="recommendation-icon-2-part1" />
+                <div className="recommendation-icon-2-part2" />
+                <div className="recommendation-icon-2-part3" />
+              </div>
+              <div className="recommendation-text">
+                Mantén tu cubeta siempre cerrada, y si es posible, cubre tus residuos con materia seca, como ojas, periódico o cartón.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* SOLICITA TU RECOLECCIÓN & DÍA DE RECOLECCIÓN */}
+      <section className="ready-bucket-section">
+       <h2 className="ready-bucket-title">¿Tu cubeta ya esta lista?</h2>
+       
       <section className="recoleccion-request-section">
         <button className="btn-amber-big">¡Solicita tu recolección!</button>
 
@@ -32,6 +54,7 @@ export default function Recoleccion() {
             <li>Nosotros pasamos y hacemos el cambio de cubeta</li>
           </ul>
         </div>
+      </section>
       </section>
 
       {/* SECCIÓN TABLAS DE COSTOS */}
@@ -90,7 +113,7 @@ export default function Recoleccion() {
       </section>
 
       {/* BANNERS RESIDUOS */}
-      <section className="banners-section">
+      <section id="lista-de-compostables" className="banners-section">
         <div className="waste-banner banner-compostable">
           <span>Residuos compostables</span>
         </div>

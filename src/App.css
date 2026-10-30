@@ -978,7 +978,7 @@ body, html {
   flex-direction: column;
   align-items: center;
   gap: 80px;
-  padding: 130px 32px 80px 80px  ;
+  padding: 130px 32px 80px 32px  ;
   box-sizing: border-box;
 }
 
@@ -1016,36 +1016,139 @@ body, html {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  max-width: 900px;
   width: 100%;
 }
 
-.recommendations-box {
-  width: 100%;
+/* Título (Recomendaciones:) */
+.recommendations-title {
+  align-self: flex-start; /* Alinea el título a la izquierda */
   text-align: left;
   color: var(--color-text-heading-black, #191919);
+  font-size: 20px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 20px;
+  font-weight: 400;
   line-height: 24px;
+  word-wrap: break-word;
+  padding-bottom: 12px;
 }
 
-.recommendations-title {
+/* Contenedor de la lista de elementos (horizontal en desktop) */
+.recommendations-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch; /* Alinea los ítems arriba por si los textos tienen diferente longitud */
+  gap: 36px;
+  flex-wrap: wrap; /* Permite que pasen a otra línea en pantallas pequeñas */
+  width: 100%;
+}
+
+/* Cada ítem de recomendación (caja con borde) */
+.recommendation-item {
+  padding: 8px;
+  flex: 1 1 0; /* Permite que cada caja crezca según el contenido */
+  border-radius: 12px;
+  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 650px; /* Limita el ancho de cada caja según el diseño (aprox 624px de texto + padding/iconos) */
+  min-width: 300px; /* Evita que la caja se haga demasiado pequeña en pantallas muy estrechas */
+}
+
+/* Texto de la recomendación */
+.recommendation-text {
+  flex: 1 1 0; /* Ocupa el espacio disponible */
+  color: var(--color-text-heading-black, #191919);
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left;
 }
 
-.recommendations-text {
-  margin: 0;
+/* ==========================================
+   ÍCONOS PERSONALIZADOS DE RECOMENDACIONES (CSS PURO)
+   ========================================== */
+.recommendation-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Ícono 1 (Cuadrado/Calendario) */
+.recommendation-icon-1 {
+  width: 18px;
+  height: 15px;
+  left: 3px;
+  top: 6px;
+  position: absolute;
+  border-radius: 2px;
+  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -0.50px;
+}
+
+/* Ícono 2 (Tapa y Cubeta) */
+.recommendation-icon-2-part1 {
+  width: 3px;
+  height: 0.47px;
+  left: 10px;
+  top: 16px;
+  position: absolute;
+  transform: rotate(-108deg);
+  transform-origin: top left;
+  border-radius: 2px;
+  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -0.50px;
+}
+
+.recommendation-icon-2-part2 {
+  width: 3px;
+  height: 0.47px;
+  left: 13.55px;
+  top: 15.85px;
+  position: absolute;
+  transform: rotate(-72deg);
+  transform-origin: top left;
+  border-radius: 2px;
+  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -0.50px;
+}
+
+.recommendation-icon-2-part3 {
+  width: 20px;
+  height: 11px;
+  left: 2px;
+  top: 9px;
+  position: absolute;
+  border-radius: 2px;
+  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -0.50px;
 }
 
 .recoleccion-request-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  max-width: 1000px;
+  gap: 35px;
   width: 100%;
+  max-width: 1300px;
+}
+
+/* Título */
+.ready-bucket-title {
+  color: var(--color-text-link-default, #918757);
+  font-size: 32px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  line-height: 36px;
+  word-wrap: break-word;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 80px;
 }
 
 .day-info-box {
@@ -1059,8 +1162,10 @@ body, html {
 
 .day-info-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 8px;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
 }
 
 .day-info-list {
@@ -1073,16 +1178,15 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   width: 100%;
-  max-width: 1200px;
 }
 
 .tables-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 80px;
   width: 100%;
 }
 
@@ -1095,8 +1199,14 @@ body, html {
   align-items: center;
   gap: 16px;
   background-color: #FFFFF3;
+
   flex: 1 1 380px;
-  max-width: 450px;
+  max-width: 505px;
+  width: 100%;
+
+  height: 479px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cost-header-img {
@@ -1154,7 +1264,6 @@ body, html {
   flex-direction: column;
   gap: 80px;
   width: 100%;
-  max-width: 1200px;
 }
 
 .waste-banner {
@@ -1630,14 +1739,33 @@ body, html {
   margin: 0;
 }
 
-.step-badge {
-  color: var(--color-text-heading-white, #FFFFF3);
+/* BADGE COMO LINK (Lista de compostables) */
+.step-badge-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+  
+  /* Textos según Figma */
+  color: var(--color-text-heading-acento-ambar, #BF7C4B);
   font-size: 18px;
   font-family: 'Work Sans', sans-serif;
-  background-color: #BF7C4B;
-  padding: 6px 12px;
-  border-radius: 8px;
-  margin-top: 4px;
+  font-weight: 400;
+  line-height: 22px;
+  word-wrap: break-word;
+  
+  /* Elimina el subrayado y estilos por defecto del link */
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efecto hover suave para el enlace */
+.step-badge-link:hover {
+  opacity: 0.8;
+  text-decoration: underline; /* Opcional: subraya al pasar el mouse para reforzar que es un link */
 }
 
 /* --- Subsección: Precios y Planes --- */
