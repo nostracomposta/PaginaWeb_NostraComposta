@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const [isCompostableHovered, setIsCompostableHovered] = useState(false);
+const [isNonCompostableHovered, setIsNonCompostableHovered] = useState(false);
 
 export default function Recoleccion() {
   return (
@@ -114,12 +117,45 @@ export default function Recoleccion() {
 
       {/* BANNERS RESIDUOS */}
       <section id="lista-de-compostables" className="banners-section">
-        <div className="waste-banner banner-compostable">
+      <div className="waste-banner-wrapper"
+        onMouseEnter={() => setIsCompostableHovered(true)}
+        onMouseLeave={() => setIsCompostableHovered(false)}
+      >
+        {isCompostableHovered ? (
+          //Estado hover (Listado 4 columnas)
+          <div className="waste-banner banner-hover-list compostable-hover">
+          <div className="waste-list-column">Cáscaras de huevo<br/>Hongos y champiñones<br/>Pan duro<br/>Hojas verdes y secas</div>
+          <div className="waste-list-column">Poda de jardín<br/>Flores<br/>Filtros y granos de café<br/>Cartón de huevo</div>
+          <div className="waste-list-column">Cartón de papel de baño<br/>Bolsas de papel<br/>Cabello<br/>Periódico</div>
+        </div>
+        ) : (
+          //Estado por defecto
+          <div className="waste-banner banner-compostable">
           <span>Residuos compostables</span>
         </div>
-        <div className="waste-banner banner-non-compostable">
-          <span>Residuos no compostables</span>
+        )}
+      </div>
+      
+        <div className="waste-banner-wrapper"
+         onMouseEnter={() => setIsNonCompostableHovered(true)}
+         onMouseLeave={() => setIsNonCompostableHovered(false)}
+        >
+          {isNonCompostableHovered ? (
+            //Estado hover (Listado 4 columnas)
+            <div className="waste-banner banner-hover-list non-compostable-hover">
+              <div className="waste-list-column">Carnes<br/>Huesos<br/>Pescado y moluscos<br/>Lácteos</div>
+              <div className="waste-list-column">Aceites<br/>Grasas / mantecas<br/>Aluminio<br/>Etiquetas de fruta</div>
+              <div className="waste-list-column">Vidrio<br/>Papel con colores<br/>Pañales<br/>Toallas femeninas</div>
+              <div className="waste-list-column">Plásticos<br/>Cigarros<br/>Excremento de animales<br/>Materiales no compostables</div>
+            </div>
+          ) : (
+            //Estado por defecto
+            <div className="waste-banner banner-non-compostable">
+             <span>Residuos no compostables</span>
+            </div>
+          )}
         </div>
+      
       </section>
 
       {/* OTROS RESIDUOS QUE TAMBIÉN NOS LLEVAMOS */}
