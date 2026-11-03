@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const [isCompostableHovered, setIsCompostableHovered] = useState(false);
-const [isNonCompostableHovered, setIsNonCompostableHovered] = useState(false);
-
 export default function Recoleccion() {
+
+  const [isCompostableHovered, setIsCompostableHovered] = useState(false);
+  const [isNonCompostableHovered, setIsNonCompostableHovered] = useState(false);
+
   return (
     <div className="recoleccion-container">
       {/* GUÍA PARA SOLICITAR RECOLECCIÓN */}
@@ -124,9 +125,30 @@ export default function Recoleccion() {
         {isCompostableHovered ? (
           //Estado hover (Listado 4 columnas)
           <div className="waste-banner banner-hover-list compostable-hover">
-          <div className="waste-list-column">Cáscaras de huevo<br/>Hongos y champiñones<br/>Pan duro<br/>Hojas verdes y secas</div>
-          <div className="waste-list-column">Poda de jardín<br/>Flores<br/>Filtros y granos de café<br/>Cartón de huevo</div>
-          <div className="waste-list-column">Cartón de papel de baño<br/>Bolsas de papel<br/>Cabello<br/>Periódico</div>
+           <ul className="waste-list-column">
+            <li>Restos de fruta y verdura</li>
+            <li>Zumos de fruta</li>
+            <li>Cáscaras de frutos secos</li>
+            <li>Secos de té</li>
+          </ul>
+           <ul className="waste-list-column">
+            <li>Cáscaras de huevo</li>
+            <li>Hongos y champiñones</li>
+            <li>Pan duro</li>
+            <li>Hojas verdes y secas</li>
+          </ul>
+          <ul className="waste-list-column">
+              <li>Poda de jardín</li>
+              <li>Flores</li>
+              <li>Filtros y granos de café</li>
+              <li>Cartón de huevo</li>
+            </ul>
+          <ul className="waste-list-column">
+              <li>Cartón de papel de baño</li>
+              <li>Bolsas de papel</li>
+              <li>Cabello</li>
+              <li>Periódico</li>
+            </ul>
         </div>
         ) : (
           //Estado por defecto
@@ -143,10 +165,30 @@ export default function Recoleccion() {
           {isNonCompostableHovered ? (
             //Estado hover (Listado 4 columnas)
             <div className="waste-banner banner-hover-list non-compostable-hover">
-              <div className="waste-list-column">Carnes<br/>Huesos<br/>Pescado y moluscos<br/>Lácteos</div>
-              <div className="waste-list-column">Aceites<br/>Grasas / mantecas<br/>Aluminio<br/>Etiquetas de fruta</div>
-              <div className="waste-list-column">Vidrio<br/>Papel con colores<br/>Pañales<br/>Toallas femeninas</div>
-              <div className="waste-list-column">Plásticos<br/>Cigarros<br/>Excremento de animales<br/>Materiales no compostables</div>
+              <ul className="waste-list-column">
+                <li>Carnes</li>
+                <li>Huesos</li>
+                <li>Pescado y moluscos</li>
+                <li>Lácteos</li>
+              </ul>
+              <ul className="waste-list-column">
+                <li>Aceites</li>
+                <li>Grasas / mantecas</li>
+                <li>Aluminio</li>
+                <li>Etiquetas de fruta</li>
+              </ul>
+              <ul className="waste-list-column">
+                <li>Vidrio</li>
+                <li>Papel con colores</li>
+                <li>Pañales</li>
+                <li>Toallas femeninas</li>
+              </ul>
+              <ul className="waste-list-column">
+                <li>Plásticos</li>
+                <li>Cigarros</li>
+                <li>Excremento de animales</li>
+                <li>Materiales no compostables</li>
+              </ul>
             </div>
           ) : (
             //Estado por defecto

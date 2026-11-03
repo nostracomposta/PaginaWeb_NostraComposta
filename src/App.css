@@ -842,7 +842,7 @@ body, html {
 
 /* Descripción de cada valor */
 .valor-text {
-  color: #FFFFFF; /* Figma solicita 'white' */
+  color: #FFFFF3; /* Figma solicita 'white' */
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
@@ -1359,21 +1359,35 @@ body, html {
   width: 100%;
 }
 
+/* Contenedor invisible para mantener el área del hover estable */
+.waste-banner-wrapper {
+  width: 100%;
+  min-height: 120px;
+  cursor: default;
+}
+
 .waste-banner {
   width: 100%;
   min-height: 120px;
+  height: 164px;
   padding: 20px;
   border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+/* -----------------------------------
+   ESTADOS POR DEFECTO
+   ----------------------------------- */
 .banner-compostable {
   outline: 2px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -2px;
   color: var(--color-text-link-default, #918757);
   font-size: 40px;
   font-family: 'Tenor Sans', sans-serif;
@@ -1382,10 +1396,67 @@ body, html {
 
 .banner-non-compostable {
   outline: 2px solid var(--color-icons-Ambar, #BF7C4B);
+  outline-offset: -2px;
   color: var(--color-text-body-acento-ambar, #BF7C4B);
   font-size: 40px;
   font-family: 'Tenor Sans', sans-serif;
   background-color: rgba(191, 124, 75, 0.1);
+}
+
+/* -----------------------------------
+   ESTADOS HOVER (Despliegue de listas)
+   ----------------------------------- */
+/* Layout compartido para las 4 columnas de texto */
+.banner-hover-list {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: row; /* Mantiene el contenido en columnas */
+  flex-wrap: wrap; /* Permite bajar a varias filas en móviles */
+  gap: 16px;
+  align-items: center;
+  justify-content: space-evenly; /* Distribuye el espacio entre columnas */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fondo verde para compostables */
+.compostable-hover {
+  background: var(--color-surface-background-primary, #918757);
+  outline: 2px solid var(--color-icons-on-button-disabled, #918757);
+  outline-offset: -2px;
+}
+
+/* Fondo ámbar para no compostables */
+.non-compostable-hover {
+  background: var(--color-surface-background-acento-ambar, #BF7C4B);
+  outline: 2px solid var(--color-icons-Ambar, #BF7C4B);
+  outline-offset: -2px;
+}
+
+/* Tipografía y estructura de cada una de las 4 columnas de texto */
+.waste-list-column {
+  flex: 0 1 auto;
+  min-width: 200px; /* Evita que el texto se aplaste demasiado en pantallas pequeñas */
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left; /* Alineación a la izquierda recomendada para listas de lectura */
+  display: flex;
+
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Configuración de los bullet points */
+.waste-list-column li {
+  list-style-type: disc; /* Asegura que aparezca el círculo a la izquierda */
+  list-style-position: outside;
 }
 
 /* Otros Residuos */
@@ -1702,7 +1773,7 @@ body, html {
 }
 
 .footer-brand {
-  color: white;
+  color: var(--color-text-heading-white, #FFFFF3);
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
