@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 function Nosotros() {
   const [isFilosofiaHovered, setIsFilosofiaHovered] = useState(false);
   const [isValoresHovered, setIsValoresHovered] = useState(false);

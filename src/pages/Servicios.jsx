@@ -76,9 +76,22 @@ export default function Servicios() {
               Inscripción $300 mxn
             </div>
             <div className="pricing-details">
-              <p><strong>Kit de bienvenida:</strong></p>
-              <p>2 cubetas 19L<br />1 cubeta 4L</p>
-              <p>Manual de separación<br />Bolsita con composta</p>
+              {/*columna izq del texto*/}
+              <div className="pricing-column">
+                <span className="pricing-text">Kit de bievenida:</span>
+                <ul className="pricing-list">
+                  <li>2 cubetas 19L</li>
+                  <li>1 cubeta 4L</li>
+                </ul>
+              </div>
+              {/*columna der del texto*/}
+              <div className="pricing-column">
+                <span className="pricing-text empty-title">&nbsp;</span>
+                <ul className="pricing-list">
+                  <li>Manual de separación</li>
+                  <li>Bolsita con composta</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -88,9 +101,22 @@ export default function Servicios() {
               Recolección $75 mxn
             </div>
             <div className="pricing-details">
-              <p><strong>Elige como pagar:</strong></p>
-              <p>Semanal<br />Mensual</p>
-              <p>Trimestral<br />Semestral</p>
+              {/*columna izq del texto*/}
+              <div className="pricing-column">
+                <span className="pricing-text">Elige como pagar:</span>
+                <ul className="pricing-list">
+                  <li>Semanal</li>
+                  <li>Mensual</li>
+                </ul>
+              </div>
+              {/*columna der del texto*/}
+              <div className="pricing-column">
+                <span className="pricing-text empty-title">&nbsp;</span>
+                <ul className="pricing-list">
+                  <li>Trimestral</li>
+                  <li>Semestral</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

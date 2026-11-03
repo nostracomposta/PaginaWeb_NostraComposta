@@ -473,11 +473,11 @@ body, html {
 .problem-section h2 {
   color: var(--primary-olive);
   font-size: 2.6rem;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .problem-section p {
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.6;
   color: var(--text-dark);
   max-width: 1050px; 
@@ -505,12 +505,12 @@ body, html {
 .how-info h2 {
   color: var(--primary-olive);
   font-size: 2.6rem;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   text-align: left;
 }
 
 .steps-list {
-  margin-top: 36px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -562,7 +562,7 @@ body, html {
 /* Final CTA */
 .final-cta {
   text-align: center;
-  margin: 60px 20px 100px;
+  margin: 80px 20px 80px;
 }
 
 .final-cta h2 {
@@ -622,7 +622,7 @@ body, html {
 .problem-block {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 34px;
 }
 
 .problem-banner {
@@ -669,7 +669,7 @@ body, html {
 .problem-quote {
   text-align: center;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 22px;
   line-height: 1.6;
   color: var(--text-dark);
   margin: 16px auto 0;
@@ -680,7 +680,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 36px;
+  gap: 16px;
 }
 
 .solution-block h2 {
@@ -690,9 +690,11 @@ body, html {
 }
 
 .solution-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 135px;
   width: 100%;
 }
 
@@ -701,22 +703,25 @@ body, html {
   padding: 24px;
   border-radius: 16px;
   min-height: 200px;
+  width: 340px;
+  height: 208px;
   display: flex;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .solution-card-inner {
   border: 1px solid var(--border-muted);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 4px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: var(--text-light);
-  font-size: 1.15rem;
-  line-height: 1.5;
+  color: var(--color-text-heading-white, #FFFFF3);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 /* 4. Filosofía y Valores Banners */
@@ -767,7 +772,7 @@ body, html {
 
 .banner-default-state h2 {
   color: var(--color-text-heading-default, #918757);
-  font-size: 2.5rem;
+  font-size: 48px;
   margin: 0;
 }
 
@@ -819,7 +824,7 @@ body, html {
   flex: 1 1 0; /* Distribuye el espacio equitativamente */
   display: flex;
   flex-direction: column;
-  justify-content: center-top;
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 10px; /* Espacio entre el título y el texto del valor */
@@ -843,7 +848,7 @@ body, html {
 /* Descripción de cada valor */
 .valor-text {
   color: #FFFFF3; /* Figma solicita 'white' */
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   line-height: 24px;
@@ -1832,24 +1837,25 @@ body, html {
   font-family: 'Tenor Sans', sans-serif;
   font-weight: 400;
   line-height: 58px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 /* --- Subsección: ¿Cómo Funciona? (Pasos con Iconos) --- */
 .how-it-works-steps {
   width: 100%;
-  max-width: 1376px;
-  padding: 32px 0 32px;
+  padding: 32px 32px 32px;
   box-sizing: border-box;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  gap: 53px;
 }
 
 .step-card {
+  width: 304px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1891,6 +1897,7 @@ body, html {
   font-family: 'Tenor Sans', sans-serif;
   font-weight: 400;
   line-height: 36px;
+  width: 100%;
   margin: 0;
 }
 
@@ -1935,8 +1942,7 @@ body, html {
 /* --- Subsección: Precios y Planes --- */
 .pricing-section {
   width: 100%;
-  max-width: 1376px;
-  padding: 24px 0;
+  padding: 24px 32px 0 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1947,54 +1953,116 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  justify-content: space-evenly;
 }
 
 .pricing-card {
-  flex: 1 1 500px;
-  padding: 16px;
+  flex: 1 1 auto;
+  padding: 12px 16px;
   border-radius: 24px;
   outline: 1px #BF7C4B solid;
   outline-offset: -1px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   background-color: #FFFFF3;
+  width: 676px;
+  height: 118px;
 }
 
 .pricing-badge {
-  padding: 16px;
+  padding: 10px;
+  width: 38%;
+  flex-shrink: 0;
   background: var(--color-surface-background-acento-ambar, #BF7C4B);
   border-radius: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--color-text-heading-white, #FFFFF3);
-  font-size: 28px;
+  font-size: 32px;
   font-family: 'Tenor Sans', sans-serif;
+  font-weight: 400;
+  line-height: 36px;
+  word-wrap: break-word;
   text-align: center;
   min-width: 200px;
 }
 
 .pricing-details {
+  flex: 1;
   display: flex;
   gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pricing-column {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+/* Estilo para los títulos (Kit de bienvenida:) */
+.pricing-text-bold {
   color: var(--color-text-heading-black, #191919);
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Work Sans', sans-serif;
+  font-weight: 600; /* Ligeramente más grueso para destacar */
   line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* Estilo para la lista de ítems */
+.pricing-text {
+  color: var(--color-text-heading-black, #191919);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+/* Lista con viñetas */
+.pricing-list {
+  margin: 0;
+  padding-left: 24px; /* Espacio para que quepa el bullet point */
+  list-style-type: disc; /* Estilo clásico del bullet point (círculo) */
+}
+
+/* Elementos individuales de la lista (sustituye al .pricing-text anterior) */
+.pricing-list li {
+  color: var(--color-text-heading-black, #191919);
+  font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: left;
+  margin-top: 4px; /* Pequeño espacio vertical entre los ítems */
+}
+
+/* Espaciador invisible para alinear la segunda columna */
+.empty-title {
+  visibility: hidden;
 }
 
 .acopio-note {
   width: 100%;
   text-align: right;
   color: var(--color-text-heading-black, #191919);
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Work Sans', sans-serif;
-  margin-top: 12px;
 }
 
 /* --- Subsección: Banners de Servicios --- */
 .services-list-section {
   width: 100%;
-  max-width: 1376px;
-  margin: 80px auto 80px auto;
+  margin: 80px 32px 80px 32px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -2002,11 +2070,13 @@ body, html {
 .services-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 85px;
+  width: 100%;
 }
 
 .service-banner-card {
   width: 100%;
+  max-width: none;
   padding: 20px;
   background: var(--color-surface-background-primary, #918757);
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
@@ -2019,14 +2089,14 @@ body, html {
 }
 
 .service-banner-img {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
   height: 240px;
   object-fit: cover;
   border-radius: 12px;
 }
 
 .service-banner-info {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
