@@ -4,6 +4,7 @@ export default function Recoleccion() {
 
   const [isCompostableHovered, setIsCompostableHovered] = useState(false);
   const [isNonCompostableHovered, setIsNonCompostableHovered] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   return (
     <div className="recoleccion-container">
@@ -11,7 +12,11 @@ export default function Recoleccion() {
       <section className="recoleccion-guide-section">
         <h2 className="recoleccion-main-title">Guía para solicitar tu recolección</h2>
         
-        <button className="btn-olive-big">Revisa los pasos</button>
+        <button className="btn-olive-big"
+          onClick={() => setIsOverlayOpen(true)}
+        >
+          Revisa los pasos
+        </button>
 
         <div className="recommendations-box">
           <div className="recommendations-title">Recomendaciones:</div>
@@ -238,6 +243,121 @@ export default function Recoleccion() {
       <div className="final-action">
         <button className="btn-amber-big">¡Solicita tu recolección!</button>
       </div>
+
+    {/* =========================================
+          OVERLAY / MODAL (Guía de Pasos)
+          ========================================= */}
+      {isOverlayOpen && (
+        <div className="overlay-backdrop">
+          <div className="overlay-modal">
+            <button
+              className="overlay-close-btn"
+              onClick={() => setIsOverlayOpen(false)}
+              aria-label="Cerrar"
+            >
+              <div className="close-icon-wrapper">
+                <div className="close-line line-1" />
+                <div className="close-line line-2" />
+              </div>
+            </button>
+
+            <div className="overlay-scroll-content">
+
+              <div className="overlay-steps-grid">
+
+                <div className="overlay-step">
+                  <div className="step-number">1</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Identifícate</h3>
+                    <p className="step-description">
+                      Accede al link del formulario de recolección desde tu WhatsApp o desde la página web. Recuerda poner tu número de cliente de 4 dígitos.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="overlay-step">
+                  <div className="step-number">2</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Número de servicios</h3>
+                    <p className="step-description">
+                      Indica el número de servicios que deseas programar, desde 1 hasta 15 servicios (un ciclo completo de composta).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="overlay-step">
+                  <div className="step-number">3</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Selecciona tu servicio</h3>
+                    <p className="step-description">
+                      Indica el tipo de servicio que deseas solicitar.
+                    </p>
+                    <p className="step-note">
+                      *Si cuentas con ambos servicios (POOPIS y Nostra Composta) debes llenar el formulario para cada servicio, siguiendo los mismos pasos en esta lista.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="overlay-step">
+                  <div className="step-number">4</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Selecciona la frecuencia</h3>
+                    <p className="step-description">
+                      A partir de 2 servicios podrás programar la frecuencia de recolección, semanal o quincenal.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="overlay-step">
+                  <div className="step-number">5</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Forma de pago</h3>
+                    <p className="step-description">
+                      Selecciona tu forma de pago. Si seleccionas transferencia, envía tu comprobante por WhatsApp.
+                    </p>
+                    <p className="step-description">
+                      <strong>Concepto:</strong> número de cliente o número de pedido (este se enviará a tu correo cuando envíes el formulario).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="overlay-step">
+                  <div className="step-number">6</div>
+                  <div className="step-content">
+                    <h3 className="step-title">Comentarios adicionales</h3>
+                    <p className="step-description">
+                      Aquí puedes enviar tus códigos de acceso a tu fraccionamiento en caso de ser necesario.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="overlay-info-box">
+                <div className="info-box-left">
+                  <p>
+                    Al finalizar, <strong>no olvides enviar tu formulario</strong>. Después, <strong>recibirás un primer correo confirmando tu solicitud</strong>. Con este podrás asegurarte que se realizó correctamente tu solicitud.
+                  </p>
+                </div>
+                <div className="info-box-right">
+                  <h3 className="info-box-title">Confirmación de pedido</h3>
+                  <p className="info-box-desc">
+                    <strong>Recibirás un segundo correo confirmando tu pedido</strong>. Contendrá un ticket con la cantidad de servicios y las fechas programadas para tener un mejor control de tus servicios y pagos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="overlay-footer">
+              <button
+                className="overlay-final-btn"
+                onClick={() => setIsOverlayOpen(false)}
+              >
+                ¡Solicita tu recolección!
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
