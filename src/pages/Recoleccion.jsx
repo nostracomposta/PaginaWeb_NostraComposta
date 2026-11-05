@@ -1,4 +1,12 @@
 import React, { useState } from 'react';
+import calendario from '../assets/images/calendario.svg';
+import trashmini from '../assets/images/trashmini.svg';
+import navlogo from '../assets/images/navlogo.png';
+import logopoopis from '../assets/images/logopoopis.png';
+import pet1 from '../assets/images/pet1.svg';
+import hdpe2 from '../assets/images/hdpe2.svg';
+import pp5 from '../assets/images/pp5.svg';
+import defreirafluir from '../assets/images/defreirafluir.png';
 
 export default function Recoleccion() {
 
@@ -25,7 +33,12 @@ export default function Recoleccion() {
             {/* Primer ítem (Reloj/Calendario) */}
             <div className="recommendation-item">
               <div className="recommendation-icon-wrapper">
-                <div className="recommendation-icon-1" />
+                {/* 2. Reemplazo por el ícono de calendario importado */}
+                <img 
+                  src={calendario} 
+                  alt="Calendario" 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                />
               </div>
               <div className="recommendation-text">
                 Pide tu recolección máximo cada 2 semanas, ya que los residuos comienzan a descomponerse y pueden generar olores que atraigan vectores como insectos o larvas a tu cubeta.
@@ -35,9 +48,12 @@ export default function Recoleccion() {
             {/* Segundo ítem (Cubeta cerrada) */}
             <div className="recommendation-item">
               <div className="recommendation-icon-wrapper">
-                <div className="recommendation-icon-2-part1" />
-                <div className="recommendation-icon-2-part2" />
-                <div className="recommendation-icon-2-part3" />
+                {/* 3. Reemplazo por el ícono de cubeta mini importado */}
+                <img 
+                  src={trashmini} 
+                  alt="Cubeta cerrada" 
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                />
               </div>
               <div className="recommendation-text">
                 Mantén tu cubeta siempre cerrada, y si es posible, cubre tus residuos con materia seca, como ojas, periódico o cartón.
@@ -73,7 +89,7 @@ export default function Recoleccion() {
         <div className="tables-grid">
           {/* Tabla 1 */}
           <div className="cost-table-card">
-            <img className="cost-header-img" src="https://placehold.co/381x149" alt="Planes de recolección" />
+            <img className="cost-header-img" src={navlogo} alt="Planes de recolección" />
             <div className="table-content">
               <div className="table-column">
                 <span className="column-header">Número de servicios</span>
@@ -97,7 +113,7 @@ export default function Recoleccion() {
           {/* Tabla 2 */}
           <div className="cost-table-card">
             <div className="cost-header-img-wrapper">
-              <img className="cost-header-img-small" src="https://placehold.co/303x74" alt="Costos alternativos" />
+              <img className="cost-header-img-small" src={logopoopis} alt="Costos alternativos" />
             </div>
             <div className="table-content">
               <div className="table-column">
@@ -214,9 +230,9 @@ export default function Recoleccion() {
           <div className="other-waste-card">
             <h3 className="other-waste-title">Plástico</h3>
             <div className="other-waste-images">
-              <img src="https://placehold.co/75x100" alt="Plástico 1" />
-              <img src="https://placehold.co/81x100" alt="Plástico 2" />
-              <img src="https://placehold.co/78x100" alt="Plástico 3" />
+              <img src={pet1} alt="Plástico 1" />
+              <img src={hdpe2} alt="Plástico 2" />
+              <img src={pp5} alt="Plástico 3" />
             </div>
           </div>
 
@@ -233,7 +249,7 @@ export default function Recoleccion() {
             <h3 className="other-waste-title">Aceite usado</h3>
             <div className="collaboration-box">
               <p className="collaboration-label">En colaboración con:</p>
-              <img src="https://placehold.co/106x100" alt="Empresa aliada" />
+              <img src={defreirafluir} alt="Empresa aliada" />
             </div>
           </div>
         </div>

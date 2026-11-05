@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import navlogo from '../assets/images/navlogo.png';
 
 function NavBar() {
   return (
     <nav className="navbar">
       <Link to="/">
-        <img className="nav-logo" src="https://placehold.co/250x98" alt="Nostra Composta Logo" />
+        <img className="nav-logo" src={navlogo} alt="Nostra Composta Logo"/>
       </Link>
 
       <div className="nav-links">

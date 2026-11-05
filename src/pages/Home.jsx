@@ -1,4 +1,11 @@
 import { Link } from 'react-router-dom';
+
+// Importación con los nombres exactos de tus archivos en src/assets/images/
+import iconoComunidad from '../assets/images/comunidad.svg';
+import iconoCubeta from '../assets/images/trash.svg';
+import iconoUbicacion from '../assets/images/pin.svg';
+import iconoPlanta from '../assets/images/flower.svg';
+
 function Home() {
   const services = [
     { title: 'Hogar Nostra Composta', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
@@ -25,10 +32,10 @@ function Home() {
           </p>
           <div className="highlight-cta">
             <span>¿Te interesa?</span>
-           <Link to="/inscribete" className="highlight-btn">
-            ¡Inscríbete!
-          </Link>
-        </div>
+            <Link to="/inscribete" className="highlight-btn">
+              ¡Inscríbete!
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -50,19 +57,30 @@ function Home() {
           
           <div className="steps-list">
             <div className="step-item">
-              <div className="step-icon">1</div>
+              <div className="how-icon-wrapper">
+                <img src={iconoComunidad} alt="Inscríbete" className="how-step-icon" />
+              </div>
               <span>Inscríbete</span>
             </div>
+
             <div className="step-item">
-              <div className="step-icon">2</div>
+              <div className="how-icon-wrapper">
+                <img src={iconoCubeta} alt="Separa tus residuos" className="how-step-icon" />
+              </div>
               <span>Separa tus residuos</span>
             </div>
+
             <div className="step-item">
-              <div className="step-icon">3</div>
+              <div className="how-icon-wrapper">
+                <img src={iconoUbicacion} alt="Los recolectamos" className="how-step-icon" />
+              </div>
               <span>Los recolectamos</span>
             </div>
+
             <div className="step-item">
-              <div className="step-icon">4</div>
+              <div className="how-icon-wrapper">
+                <img src={iconoPlanta} alt="Recibe tu composta" className="how-step-icon" />
+              </div>
               <span>Recibe tu composta</span>
             </div>
           </div>
@@ -83,14 +101,14 @@ function Home() {
               <h3>{item.title}</h3>
               <div className="service-card-divider"></div>
               {item.btnText.includes('Inscríbete') ? (
-               <Link to="/inscribete" className="service-card-btn">
-                {item.btnText}
-               </Link>
+                <Link to="/inscribete" className="service-card-btn">
+                  {item.btnText}
+                </Link>
               ) : (
-               <button className="service-card-btn">{item.btnText}</button>
+                <button className="service-card-btn">{item.btnText}</button>
               )}
-             </div>
-            ))}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -98,10 +116,10 @@ function Home() {
       <section className="final-cta">
         <h2>Devuelve a la tierra lo que viene de ella.<br/>¡Se parte de Nostra Composta!</h2>
         <Link to="/inscribete" className="btn-primary" style={{ fontSize: '1.4rem', padding: '12px 32px' }}>
-         Inscríbete
+          Inscríbete
         </Link>
       </section>
-      </main>
+    </main>
   );
 }
 

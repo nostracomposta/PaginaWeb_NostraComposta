@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 
+// 1. Importación de los íconos SVG desde src/assets/images/
+import iconoComunidadVerde from '../assets/images/comunidadverde.svg';
+import iconoTrashVerde from '../assets/images/trashverde.svg';
+import iconoPinVerde from '../assets/images/pinverde.svg';
+import iconoFlowerVerde from '../assets/images/flowerverde.svg';
+
 export default function Servicios() {
   return (
     <div className="section-container">
@@ -11,11 +17,8 @@ export default function Servicios() {
         <div className="steps-grid">
           {/* Paso 1 */}
           <div className="step-card">
-            <div className="icon-wrapper">
-              <div className="step-icon-custom icon-1-1" />
-              <div className="step-icon-custom icon-1-2" />
-              <div className="step-icon-custom icon-1-3" />
-              <div className="step-icon-custom icon-1-4" />
+            <div className="how-icon-wrapper">
+              <img src={iconoComunidadVerde} alt="Inscríbete" className="how-step-icon" />
             </div>
             <h3 className="step-title">Inscríbete</h3>
             <p className="step-description">
@@ -25,10 +28,8 @@ export default function Servicios() {
 
           {/* Paso 2 */}
           <div className="step-card">
-            <div className="icon-wrapper">
-              <div className="step-icon-custom icon-2-1" />
-              <div className="step-icon-custom icon-2-2" />
-              <div className="step-icon-custom icon-2-3" />
+            <div className="how-icon-wrapper">
+              <img src={iconoTrashVerde} alt="Separa tus residuos" className="how-step-icon" />
             </div>
             <h3 className="step-title">Separa tus residuos</h3>
             <p className="step-description">
@@ -41,10 +42,8 @@ export default function Servicios() {
 
           {/* Paso 3 */}
           <div className="step-card">
-            <div className="icon-wrapper">
-              <div className="step-icon-custom icon-3-1" />
-              <div className="step-icon-custom icon-3-2" />
-              <div className="step-icon-custom icon-3-3" />
+            <div className="how-icon-wrapper">
+              <img src={iconoPinVerde} alt="Recolección" className="how-step-icon" />
             </div>
             <h3 className="step-title">Recolección</h3>
             <p className="step-description">
@@ -54,10 +53,8 @@ export default function Servicios() {
 
           {/* Paso 4 */}
           <div className="step-card">
-            <div className="icon-wrapper">
-              <div className="step-icon-custom icon-4-1" />
-              <div className="step-icon-custom icon-4-2" />
-              <div className="step-icon-custom icon-4-3" />
+            <div className="how-icon-wrapper">
+              <img src={iconoFlowerVerde} alt="Recibe composta" className="how-step-icon" />
             </div>
             <h3 className="step-title">Recibe composta</h3>
             <p className="step-description">
