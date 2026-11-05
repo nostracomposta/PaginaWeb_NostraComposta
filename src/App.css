@@ -626,6 +626,8 @@ body, html {
 }
 
 .problem-banner {
+  position: relative;
+  z-index: 2;
   background-color: var(--primary-olive);
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://placehold.co/1376x270');
   background-size: cover;
@@ -648,8 +650,10 @@ body, html {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  margin-top: -30px; /* Superposición sutil con el banner */
+  margin-top: -140px; /* Superposición sutil con el banner */
   padding: 0 20px;
+  position: relative;
+  z-index: 1; 
 }
 
 .impact-card {
@@ -664,6 +668,16 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Estado Hover: La tarjeta se desliza hacia abajo mostrando todo su texto */
+.impact-card:hover {
+  transform: translateY(95px); /* <--- Se desplaza hacia abajo fuera del banner */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 }
 
 .problem-quote {
@@ -672,7 +686,7 @@ body, html {
   font-size: 22px;
   line-height: 1.6;
   color: var(--text-dark);
-  margin: 16px auto 0;
+  margin: 85px auto 0;
 }
 
 /* 3. Nostra Solución */
@@ -1231,7 +1245,7 @@ body, html {
   flex: 1; /* Permite que el contenido ocupe el espacio restante */
 }
 
-.step-title {
+.overlay-step .step-title {
   color: var(--color-text-body-white, #FFFFF3) !important;
   font-size: 32px;
   font-family: 'Tenor Sans', sans-serif;
@@ -1241,7 +1255,7 @@ body, html {
   text-align: left;
 }
 
-.step-description {
+.overlay-step .step-description {
   color: var(--color-text-body-white, #FFFFF3) !important;
   font-size: 19px !important;
   font-family: 'Work Sans', sans-serif;
@@ -1252,7 +1266,7 @@ body, html {
   text-align: left;
 }
 
-.step-note {
+.overlay-step .step-note {
   color: var(--color-text-body-white, #FFFFF3) !important;
   font-size: 16px;
   font-family: 'Work Sans', sans-serif;
@@ -2160,21 +2174,23 @@ body, html {
 .icon-4-3 { width: 15px; height: 30px; left: 35px; top: 37.5px; transform: rotate(120deg); transform-origin: top left; outline: 1px solid #918757; }
 
 .step-title {
-  color: var(--color-text-heading-black, #191919);
+  color:  #191919 !important;
   font-size: 32px;
   font-family: 'Tenor Sans', sans-serif;
   font-weight: 400;
   line-height: 36px;
+  text-align: center;
   width: 100%;
   margin: 0;
 }
 
 .step-description {
-  color: var(--color-text-heading-black, #191919);
+  color:  #191919 !important;
   font-size: 20px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   line-height: 24px;
+  text-align: center;
   margin: 0;
 }
 
