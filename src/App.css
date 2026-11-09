@@ -2073,6 +2073,27 @@ body, html {
   margin: 0;
 }
 
+a.contact-value-link {
+  color: var(--color-text-on-button-default, #FFFFF3);
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+  
+  /* Quita el subrayado por defecto */
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+a.contact-value-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Separa un poco la línea del texto */
+}
+
 .footer-brand {
   color: var(--color-text-heading-white, #FFFFF3);
   font-size: 20px;

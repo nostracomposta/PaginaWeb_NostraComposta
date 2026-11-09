@@ -47,7 +47,12 @@ export function Footer() {
               </div>
               <div className="contact-info" style={{ width: 124 }}>
                 <span className="contact-title">WhatsApp</span>
-                <span className="contact-value">477-6996-923</span>
+                <a
+                 href="tel:4776996923" 
+                 className="contact-value-link"
+                >
+                  477 699 6923
+                </a>
               </div>
             </div>
 
@@ -62,7 +67,14 @@ export function Footer() {
               </div>
               <div className="contact-info">
                 <span className="contact-title">Instagram</span>
-                <span className="contact-value">@nostra.composta</span>
+                <a
+                  href="https://www.instagram.com/nostra.composta?rpxt=MWt5cXI0Y3Myem9sNQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-value-link"
+                >
+                  @nostra.composta
+                </a>
               </div>
             </div>
 
