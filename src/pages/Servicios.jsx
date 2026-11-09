@@ -153,41 +153,55 @@ export default function Servicios() {
               <p className="service-banner-desc">
                 Una solución para que tu empresa gestione sus residuos orgánicos de manera sencilla y responsable, desde la separación hasta su transformación en composta.
               </p>
-              <button className="service-banner-btn">Cotiza ahora</button>
+              <a
+                href="https://wa.me/524776996923?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="service-banner-btn"
+              >
+                Cotiza ahora
+              </a>
             </div>
           </div>
-
-          {/* Servicio 3 */}
-          <div className="service-banner-card">
-            <img className="service-banner-img" src="https://placehold.co/659x222" alt="Taller de composta" />
-            <div className="service-banner-info">
-              <h3 className="service-banner-title">Taller de composta</h3>
-              <span className="service-banner-subtitle">Personas - Escuelas - Empresas - Instituciones</span>
-              <hr className="service-banner-divider" />
-              <p className="service-banner-desc">
-                Aprende a compostar de forma práctica y sencilla. Conoce el proceso, qué residuos puedes aprovechar y cómo convertirlos en vida para el suelo.
-              </p>
-              <button className="service-banner-btn">Cotiza ahora</button>
-            </div>
-          </div>
-
-          {/* Servicio 4 */}
-          <div className="service-banner-card">
-            <img className="service-banner-img" src="https://placehold.co/659x222" alt="Servicio POOPIS" />
-            <div className="service-banner-info">
-              <h3 className="service-banner-title">Servicio POOPIS</h3>
-              <span className="service-banner-subtitle">Mascotas - Veterinarias</span>
-              <hr className="service-banner-divider" />
-              <p className="service-banner-desc">
-                Dale un mejor destino a los residuos de tu mascota. Una alternativa para aprovechar sus desechos de manera responsable y contribuir a un entorno más limpio.
-              </p>
-              <Link to="/inscribete" className="service-banner-btn">
-                Inscríbete
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+          
+    {/* Servicio 3 */}
+    <div className="service-banner-card">
+      <img className="service-banner-img" src="https://placehold.co/659x222" alt="Taller de composta" />
+      <div className="service-banner-info">
+        <h3 className="service-banner-title">Taller de composta</h3>
+        <span className="service-banner-subtitle">Personas - Escuelas - Empresas - Instituciones</span>
+        <hr className="service-banner-divider" />
+        <p className="service-banner-desc">
+          Aprende a compostar de forma práctica y sencilla. Conoce el proceso, qué residuos puedes aprovechar y cómo convertirlos en vida para el suelo.
+        </p>
+        <a
+          href="https://wa.me/524776996923?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="service-banner-btn"
+        >
+          Cotiza ahora
+        </a>
+      </div>
     </div>
+
+    {/* Servicio 4 */}
+    <div className="service-banner-card">
+      <img className="service-banner-img" src="https://placehold.co/659x222" alt="Servicio POOPIS" />
+      <div className="service-banner-info">
+        <h3 className="service-banner-title">Servicio POOPIS</h3>
+        <span className="service-banner-subtitle">Mascotas - Veterinarias</span>
+        <hr className="service-banner-divider" />
+        <p className="service-banner-desc">
+          Dale un mejor destino a los residuos de tu mascota. Una alternativa para aprovechar sus desechos de manera responsable y contribuir a un entorno más limpio.
+        </p>
+        <Link to="/inscribete" className="service-banner-btn">
+          Inscríbete
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
   );
 }

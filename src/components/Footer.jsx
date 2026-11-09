@@ -48,7 +48,9 @@ export function Footer() {
               <div className="contact-info" style={{ width: 124 }}>
                 <span className="contact-title">WhatsApp</span>
                 <a
-                 href="tel:4776996923" 
+                 href="https://wa.me/524776996923" 
+                 target="_blank"
+                 rel="noopener noreferrer"
                  className="contact-value-link"
                 >
                   477 699 6923

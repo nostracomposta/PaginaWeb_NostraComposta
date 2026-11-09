@@ -105,7 +105,14 @@ function Home() {
                   {item.btnText}
                 </Link>
               ) : (
-                <button className="service-card-btn">{item.btnText}</button>
+                <a
+                 href="https://wa.me/524776996923?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta."
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="service-card-btn"
+                >
+                  {item.btnText}
+                </a>
               )}
             </div>
           ))}
