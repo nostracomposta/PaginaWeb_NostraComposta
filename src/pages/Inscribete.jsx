@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export default function Inscribete() {
   // Estado para controlar la imagen activa del carrusel
   const [currentSlide, setCurrentSlide] = useState(0);
+  const formInscripcionUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdKIkFIV-EzDKSBH-65TylEJaB3I5q6lPoNw3TKUC_zvykGXw/viewform";
 
   const images = [
     "https://placehold.co/1311x637?text=Paso+o+Ruta+1",
@@ -24,7 +25,14 @@ export default function Inscribete() {
       <section className="inscribete-hero-section">
         <h2 className="inscribete-title">¡Sé parte de Nostra Composta!</h2>
 
-        <button className="btn-amber-big">¡Inscríbete ahora!</button>
+        <a
+         href={formInscripcionUrl}
+         target="_blank"
+         rel="noopener noreferrer"
+         className="btn-amber-big"
+        >
+          ¡Inscríbete ahora!
+        </a>
 
         <p className="notice-text">
           *Verifica las rutas de recolección antes de inscribirte.

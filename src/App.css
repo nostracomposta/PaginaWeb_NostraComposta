@@ -1359,8 +1359,12 @@ body, html {
 }
 
 .overlay-final-btn {
-  padding: 10px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 24px !important;
   background: var(--color-surface-button-on-button-hover-light, #D3CFBC);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   border: none;
   color: var(--color-text-link-hover, #575134);
@@ -1368,7 +1372,10 @@ body, html {
   font-family: 'Tenor Sans', sans-serif;
   cursor: pointer;
   transition: transform 0.2s ease;
-  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  width: auto;
+  line-height: normal;
 }
 
 .overlay-final-btn:hover {
@@ -1875,7 +1882,10 @@ body, html {
 }
 
 .btn-amber-big {
-  padding: 12px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px !important;
   background: var(--color-surface-background-acento-ambar, #BF7C4B);
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -1884,6 +1894,10 @@ body, html {
   font-size: 36px;
   font-family: 'Tenor Sans', sans-serif;
   cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none; /* Quita el subrayado por defecto */
+  width: auto;
+  line-height: normal;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -2131,7 +2145,10 @@ a.contact-value-link:hover {
 
   .btn-amber-big {
     font-size: 24px;
-    padding: 8px 16px;
+    padding: 12px 24px !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .carousel-arrow {
@@ -2478,4 +2495,30 @@ a.service-banner-btn,
 a.btn-primary,
 a.highlight-btn {
   text-decoration: none !important;
+}
+
+/* Botón exclusivo para "¡Solicita tu recolección!" en la vista de recolección */
+.btn-amber-recoleccion {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px !important;
+  background: var(--color-surface-background-acento-ambar, #BF7C4B);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: none;
+  color: var(--color-text-on-button-default, #FFFFF3);
+  font-size: 36px;
+  font-family: 'Tenor Sans', sans-serif;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  width: auto;
+  line-height: normal; /* Asegura que la altura del texto no comprima el botón */
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-amber-recoleccion:hover {
+  background: #a86b3f;
+  transform: translateY(-2px);
 }

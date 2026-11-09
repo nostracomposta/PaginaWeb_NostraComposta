@@ -5,6 +5,7 @@ import iconoComunidad from '../assets/images/comunidad.svg';
 import iconoCubeta from '../assets/images/trash.svg';
 import iconoUbicacion from '../assets/images/pin.svg';
 import iconoPlanta from '../assets/images/flower.svg';
+import heroImage from '../assets/images/banner2.jpg';
 
 function Home() {
   const services = [
@@ -18,7 +19,7 @@ function Home() {
     <main>
       {/* HERO BANNER */}
       <div className="hero-image-container">
-        <img src="https://placehold.co/1440x577" alt="Composta orgánica" />
+        <img src={heroImage} alt="Composta orgánica" />
       </div>
 
       {/* QUÉ ES NOSTRA COMPOSTA */}

@@ -13,6 +13,7 @@ export default function Recoleccion() {
   const [isCompostableHovered, setIsCompostableHovered] = useState(false);
   const [isNonCompostableHovered, setIsNonCompostableHovered] = useState(false);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSctoWXHzaqsEC7jFu3rWOzhq1aC9a_mPvMFYuRXLyshQzoMFg/viewform?usp=share_link&ouid=113931577929645402178";
 
   return (
     <div className="recoleccion-container">
@@ -68,7 +69,14 @@ export default function Recoleccion() {
        <h2 className="ready-bucket-title">¿Tu cubeta ya esta lista?</h2>
        
       <section className="recoleccion-request-section">
-        <button className="btn-amber-big">¡Solicita tu recolección!</button>
+        <a
+        href={formUrl}
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-amber-recoleccion"
+        >
+          ¡Solicita tu recolección!
+        </a>
 
         <div className="day-info-box">
           <h3 className="day-info-title">Día de recolección:</h3>
@@ -257,7 +265,14 @@ export default function Recoleccion() {
 
       {/* BOTÓN FINAL */}
       <div className="final-action">
-        <button className="btn-amber-big">¡Solicita tu recolección!</button>
+        <a
+         href={formUrl}
+         target="_blank" 
+         rel="noopener noreferrer" 
+         className="btn-amber-recoleccion"
+        >
+          ¡Solicita tu recolección!
+        </a>
       </div>
 
     {/* =========================================
@@ -364,12 +379,15 @@ export default function Recoleccion() {
             </div>
 
             <div className="overlay-footer">
-              <button
-                className="overlay-final-btn"
-                onClick={() => setIsOverlayOpen(false)}
+              <a
+               href={formUrl}
+               target="_blank" 
+               rel="noopener noreferrer" 
+               className="overlay-final-btn"
+               onClick={() => setIsOverlayOpen(false)}
               >
                 ¡Solicita tu recolección!
-              </button>
+              </a>
             </div>
           </div>
         </div>
