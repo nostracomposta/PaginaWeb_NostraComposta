@@ -48,7 +48,7 @@ export function Footer() {
               <div className="contact-info" style={{ width: 124 }}>
                 <span className="contact-title">WhatsApp</span>
                 <a
-                 href="https://wa.me/524776996923" 
+                 href="https://api.whatsapp.com/send?phone=524776996923&text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta." 
                  target="_blank"
                  rel="noopener noreferrer"
                  className="contact-value-link"

@@ -153,17 +153,15 @@ export default function Servicios() {
               <p className="service-banner-desc">
                 Una solución para que tu empresa gestione sus residuos orgánicos de manera sencilla y responsable, desde la separación hasta su transformación en composta.
               </p>
-              <a
-                href="https://wa.me/524776996923?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="service-banner-btn"
+              <button
+               className="service-banner-btn"
+               onClick={() => window.open("https://api.whatsapp.com/send?phone=524776996923&text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20para%20Empresas.", "_blank")}
               >
                 Cotiza ahora
-              </a>
+              </button>
             </div>
           </div>
-          
+
     {/* Servicio 3 */}
     <div className="service-banner-card">
       <img className="service-banner-img" src="https://placehold.co/659x222" alt="Taller de composta" />
@@ -174,14 +172,12 @@ export default function Servicios() {
         <p className="service-banner-desc">
           Aprende a compostar de forma práctica y sencilla. Conoce el proceso, qué residuos puedes aprovechar y cómo convertirlos en vida para el suelo.
         </p>
-        <a
-          href="https://wa.me/524776996923?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio%20de%20Nostra%20Composta."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="service-banner-btn"
+        <button
+         className="service-banner-btn"
+         onClick={() => window.open("https://api.whatsapp.com/send?phone=524776996923&text=Hola,%20me%20gustaría%20cotizar%20un%20Taller%20de%20Composta.", "_blank")}
         >
           Cotiza ahora
-        </a>
+        </button>
       </div>
     </div>
 
