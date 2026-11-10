@@ -2595,10 +2595,26 @@ a.highlight-btn {
     gap: 40px;
   }
 
+  .about-banner-wrapper {
+    height: auto !important;
+    min-height: 180px;
+  }
+
+  .about-banner-card {
+    height: auto !important;
+    min-height: 180px;
+    padding: 20px 16px;
+  }
+
   .about-intro-card {
     flex-direction: column;
     padding: 16px;
     gap: 20px;
+  }
+
+  .about-intro-text {
+    font-size: 16px !important;
+    line-height: 1.5;
   }
 
   .about-intro-img {
@@ -2628,10 +2644,91 @@ a.highlight-btn {
     min-height: auto;
   }
 
+  .banner-valores-content {
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 20px 10px !important;
+    height: auto !important;
+  }
+
+  .valor-item {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  .valor-title {
+    font-size: 18px !important;
+  }
+
+  .valor-text {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+
+  /* Estado hover de Filosofía */
+  .banner-hover-text {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    padding: 10px;
+  }
+
+
   /* 5. Servicios (Grid y Banners principales) */
   .services-grid {
     grid-template-columns: 1fr;
     padding: 0 16px;
+  }
+
+  .pricing-card {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .pricing-badge {
+    width: 100% !important;
+    min-width: auto !important;
+    font-size: 22px !important;
+    padding: 12px;
+  }
+
+  .pricing-details {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  /* Banners de servicios principales */
+  .service-banner-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .service-banner-info {
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .service-banner-title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+
+  .service-banner-desc {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+  
+  /* Eliminar espacios excesivos al final de las tarjetas */
+  .services-list-section {
+    margin: 30px 0 !important;
   }
 
   .service-card {
@@ -2686,10 +2783,51 @@ a.highlight-btn {
     max-width: 100%;
   }
 
+  .waste-banner-wrapper {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .waste-banner {
+    height: auto !important;
+    min-height: 140px;
+  }
+
+  /* Listas desplegadas en hover: apiladas en móvil */
+  .banner-hover-list {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 24px 16px !important;
+    gap: 12px !important;
+  }
+
+  .waste-list-column {
+    width: 100% !important;
+    min-width: auto !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    padding-left: 15px;
+  }
+
   /* 7. Vista Inscríbete y Carrusel */
-  .carousel-container {
-    height: 280px;
-    border-radius: 16px;
+
+  .map-wrapper {
+    display: block;
+    width: 100%;
+    min-height: 320px; /* Le da buena altura para destacar en celular */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+
+  .map-wrapper:active {
+    transform: scale(0.98);
+  }
+
+  .routes-map-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
   }
 
   .routes-section {
@@ -2811,7 +2949,7 @@ a.highlight-btn {
 
   /* Animación opcional de la hamburguesa a una 'X' cuando está abierta */
   .hamburger-line.open:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: translateY(9.5px) rotate(45deg);
   }
 
   .hamburger-line.open:nth-child(2) {
@@ -2819,6 +2957,6 @@ a.highlight-btn {
   }
 
   .hamburger-line.open:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: translateY(-9.5px) rotate(-45deg);
   }
 }
