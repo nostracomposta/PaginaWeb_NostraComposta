@@ -6,6 +6,12 @@ import iconoComunidadVerde from '../assets/images/comunidadverde.svg';
 import iconoTrashVerde from '../assets/images/trashverde.svg';
 import iconoPinVerde from '../assets/images/pinverde.svg';
 import iconoFlowerVerde from '../assets/images/flowerverde.svg';
+import hogarServicio from '../assets/images/hogar2.jpg';
+import empresaServicio from '../assets/images/empresa2.jpg';
+import tallerServicio from '../assets/images/taller2.jpg';
+import poopisServicio from '../assets/images/poopis2.jpg';
+
+
 
 export default function Servicios() {
   return (
@@ -129,7 +135,7 @@ export default function Servicios() {
         <div className="services-cards-container">
           {/* Servicio 1 */}
           <div className="service-banner-card">
-            <img className="service-banner-img" src="https://placehold.co/659x222" alt="Hogar Nostra Composta" />
+            <img className="service-banner-img" src={hogarServicio} alt="Hogar Nostra Composta" />
             <div className="service-banner-info">
               <h3 className="service-banner-title">Hogar Nostra Composta</h3>
               <span className="service-banner-subtitle">Familias - Casas - Departamentos</span>
@@ -145,7 +151,7 @@ export default function Servicios() {
 
           {/* Servicio 2 */}
           <div className="service-banner-card">
-            <img className="service-banner-img" src="https://placehold.co/659x222" alt="Empresa Nostra Composta" />
+            <img className="service-banner-img" src={empresaServicio} alt="Empresa Nostra Composta" />
             <div className="service-banner-info">
               <h3 className="service-banner-title">Empresa Nostra Composta</h3>
               <span className="service-banner-subtitle">Restaurantes - Cafeterías - Hoteles - Comercios - Oficinas</span>
@@ -164,7 +170,7 @@ export default function Servicios() {
 
     {/* Servicio 3 */}
     <div className="service-banner-card">
-      <img className="service-banner-img" src="https://placehold.co/659x222" alt="Taller de composta" />
+      <img className="service-banner-img" src={tallerServicio} alt="Taller de composta" />
       <div className="service-banner-info">
         <h3 className="service-banner-title">Taller de composta</h3>
         <span className="service-banner-subtitle">Personas - Escuelas - Empresas - Instituciones</span>
@@ -183,7 +189,7 @@ export default function Servicios() {
 
     {/* Servicio 4 */}
     <div className="service-banner-card">
-      <img className="service-banner-img" src="https://placehold.co/659x222" alt="Servicio POOPIS" />
+      <img className="service-banner-img" src={poopisServicio} alt="Servicio POOPIS" />
       <div className="service-banner-info">
         <h3 className="service-banner-title">Servicio POOPIS</h3>
         <span className="service-banner-subtitle">Mascotas - Veterinarias</span>

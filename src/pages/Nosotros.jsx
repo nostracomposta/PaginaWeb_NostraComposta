@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import banner from '../assets/images/nosotros.jpg';
+import problemaImage from '../assets/images/problema.jpg'
 
 function Nosotros() {
   const [isFilosofiaHovered, setIsFilosofiaHovered] = useState(false);
@@ -8,7 +10,7 @@ function Nosotros() {
     <main className="about-section">
       {/* Tarjeta Introductoria */}
       <div className="about-intro-card">
-        <img className="about-intro-img" src="https://placehold.co/516x250" alt="Sobre nosotros" />
+        <img className="about-intro-img" src={banner} alt="Sobre nosotros" />
         <div className="about-intro-text">
           <p>
             Somos <strong>Nostra Composta</strong> y queremos hacer que compostar sea fácil para todos.
@@ -27,6 +29,11 @@ function Nosotros() {
       {/* Problemática */}
       <div className="problem-block">
         <div className="problem-banner">
+          <img
+            src={problemaImage}
+            alt="problemática"
+            className="problem-banner-img"
+          />
           <h2>¿Cuál es la problemática que nos impulsa a actuar?</h2>
         </div>
 

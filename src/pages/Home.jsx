@@ -6,13 +6,18 @@ import iconoCubeta from '../assets/images/trash.svg';
 import iconoUbicacion from '../assets/images/pin.svg';
 import iconoPlanta from '../assets/images/flower.svg';
 import heroImage from '../assets/images/banner2.jpg';
+import howImage from '../assets/images/cubetacomposta.jpg';
+import hogarImage from '../assets/images/hogar.jpg';
+import empresaImage from '../assets/images/empresa.jpg';
+import tallerImage from '../assets/images/taller.jpg';
+import poopisImage from '../assets/images/poopis.jpg';
 
 function Home() {
   const services = [
-    { title: 'Hogar Nostra Composta', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
-    { title: 'Empresa Nostra Composta', btnText: 'Cotiza ahora', img: 'https://placehold.co/286x222' },
-    { title: 'Taller de composta', btnText: 'Cotiza ahora', img: 'https://placehold.co/286x222' },
-    { title: 'Servicio \n POOPIS', btnText: 'Inscríbete ahora', img: 'https://placehold.co/286x222' },
+    { title: 'Hogar Nostra Composta', btnText: 'Inscríbete ahora', img: hogarImage },
+    { title: 'Empresa Nostra Composta', btnText: 'Cotiza ahora', img: empresaImage },
+    { title: 'Taller de composta', btnText: 'Cotiza ahora', img: tallerImage },
+    { title: 'Servicio \n POOPIS', btnText: 'Inscríbete ahora', img: poopisImage },
   ];
 
   return (
@@ -88,7 +93,7 @@ function Home() {
         </div>
 
         <div className="how-image-container">
-          <img src="https://placehold.co/580x650" alt="Proceso de recolección" />
+          <img src={howImage} alt="Proceso de recolección" />
         </div>
       </section>
 

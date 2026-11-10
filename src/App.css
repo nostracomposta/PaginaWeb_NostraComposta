@@ -633,21 +633,34 @@ body, html {
   position: relative;
   z-index: 2;
   background-color: var(--primary-olive);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://placehold.co/1376x270');
-  background-size: cover;
-  background-position: center;
   border-radius: 16px;
   padding: 64px 32px;
   text-align: center;
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Estilo para la imagen interna */
+.problem-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* Queda detrás del texto */
+  filter: brightness(0.7);
 }
 
 .problem-banner h2 {
+  position: relative;
+  z-index: 2;
   color: var(--text-light);
   font-size: 2.6rem;
   line-height: 1.25;
   max-width: 860px;
   margin: 0 auto;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .impact-cards-container {
@@ -789,18 +802,20 @@ body, html {
 }
 
 .banner-default-state h2 {
-  color: var(--color-text-heading-default, #918757);
+  color: #FFFFF3 !important;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
   font-size: 48px;
   margin: 0;
 }
 
 /* Fondos específicos (ajusta las URLs a tus imágenes) */
 .banner-filosofia {
-  /* background-image: url('tu-imagen-filosofia.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/filosofia.jpg');
 }
 
+
 .banner-valores {
-  /* background-image: url('tu-imagen-valores.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/valores.jpg');
 }
 
 /* -----------------------------------
@@ -1682,19 +1697,25 @@ body, html {
 .banner-compostable {
   outline: 2px solid var(--color-icons-on-button-disabled, #918757);
   outline-offset: -2px;
-  color: var(--color-text-link-default, #918757);
+  color: #FFFFF3;
   font-size: 40px;
   font-family: 'Tenor Sans', sans-serif;
-  background-color: rgba(145, 135, 87, 0.1);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/compostable.jpg');
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
 }
 
 .banner-non-compostable {
   outline: 2px solid var(--color-icons-Ambar, #BF7C4B);
   outline-offset: -2px;
-  color: var(--color-text-body-acento-ambar, #BF7C4B);
+  color: #FFFFF3;
   font-size: 40px;
   font-family: 'Tenor Sans', sans-serif;
-  background-color: rgba(191, 124, 75, 0.1);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/nocompostable.jpg');
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra para resaltar el texto */
 }
 
 /* -----------------------------------
@@ -1907,70 +1928,6 @@ body, html {
 
 .btn-amber-big:hover {
   background: #a86b3f;
-}
-
-/* Carrusel */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  max-width: none;
-  border-radius: 32px;
-  outline: 1px solid var(--color-icons-on-button-disabled, #918757);
-  outline-offset: -1px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #FFFFF3;
-}
-
-.carousel-track {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: cover;
-  display: block;
-}
-
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--color-icons-on-button-disabled, #918757);
-  border-radius: 50%;
-  color: var(--color-icons-on-button-disabled, #918757);
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.95);
-  transform: translateY(-50%) scale(1.05);
-}
-
-.arrow-left {
-  left: 20px;
-}
-
-.arrow-right {
-  right: 20px;
 }
 
 /* Rutas de Recolección */

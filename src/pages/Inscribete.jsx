@@ -37,33 +37,6 @@ export default function Inscribete() {
         <p className="notice-text">
           *Verifica las rutas de recolección antes de inscribirte.
         </p>
-
-        {/* CARRUSEL DE IMÁGENES / RUTAS */}
-        <div className="carousel-container">
-          <button 
-            className="carousel-arrow arrow-left" 
-            onClick={handlePrev} 
-            aria-label="Anterior"
-          >
-            &#10094;
-          </button>
-
-          <div className="carousel-track">
-            <img 
-              src={images[currentSlide]} 
-              alt={`Ruta de recolección ${currentSlide + 1}`} 
-              className="carousel-image" 
-            />
-          </div>
-
-          <button 
-            className="carousel-arrow arrow-right" 
-            onClick={handleNext} 
-            aria-label="Siguiente"
-          >
-            &#10095;
-          </button>
-        </div>
       </section>
 
       {/* SECCIÓN RUTAS DE RECOLECCIÓN */}
