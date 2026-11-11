@@ -2800,6 +2800,13 @@ a.highlight-btn {
     min-height: 140px;
   }
 
+  .banner-compostable,
+  .banner-non-compostable {
+    font-size: 26px !important;    /* Reduce el tamaño de letra para que quepa bien */
+    line-height: 34px !important;  /* Le da holgura vertical al texto si se divide en 2 líneas */
+    padding: 16px !important;      /* Margen interno para evitar roce con los bordes */
+  }
+
   /* Listas desplegadas en hover: apiladas en móvil */
   .banner-hover-list {
     flex-direction: column !important;
