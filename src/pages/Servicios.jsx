@@ -9,7 +9,7 @@ import iconoFlowerVerde from '../assets/images/flowerverde.svg';
 import hogarServicio from '../assets/images/hogar2.jpg';
 import empresaServicio from '../assets/images/empresa2.jpg';
 import tallerServicio from '../assets/images/taller2.jpg';
-import poopisServicio from '../assets/images/poopis2.jpg';
+import poopisServicio from '../assets/images/poopiscentro.jpg';
 
 
 
