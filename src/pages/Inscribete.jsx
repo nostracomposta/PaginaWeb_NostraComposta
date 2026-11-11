@@ -44,11 +44,11 @@ export default function Inscribete() {
         <h2 className="inscribete-title">Rutas de recolección</h2>
         
         <div className="map-wrapper">
-          <img 
-            className="routes-map-img" 
-            src="https://placehold.co/915x522?text=Mapa+de+Rutas" 
-            alt="Mapa de rutas de recolección" 
-          />
+          <iframe
+            src="https://www.google.com/maps/d/u/3/embed?mid=1iA_sQ70qt9BRf5_0aB5HIX92YW7SVpU&ehbc=2E312F&noprof=1"
+            title="Rutas de recolección Nostra Composta"
+            className="routes-map-iframe"
+          ></iframe>
         </div>
       </section>
     </div>
