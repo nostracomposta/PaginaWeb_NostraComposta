@@ -1699,6 +1699,7 @@ body, html {
   outline-offset: -2px;
   color: #FFFFF3;
   font-size: 40px;
+  line-height: 40px;
   font-family: 'Tenor Sans', sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/compostable.jpg');
   background-size: cover;
@@ -1711,6 +1712,7 @@ body, html {
   outline-offset: -2px;
   color: #FFFFF3;
   font-size: 40px;
+  line-height: 40px;
   font-family: 'Tenor Sans', sans-serif;
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./assets/images/nocompostable.jpg');
   background-size: cover;
