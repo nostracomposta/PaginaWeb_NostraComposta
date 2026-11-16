@@ -74,7 +74,7 @@ function Nosotros() {
           </div>
           <div className="solution-card">
             <div className="solution-card-inner">
-              <p>En colaboración con “De Freír a Fluir” recolectamos también el aceite usado, este es transformado en biodiesel.</p>
+              <p>En colaboración con “De Freír a Fluir” recolectamos también el aceite usado; este es transformado en biodiesel.</p>
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ function Nosotros() {
               <div className="valor-item">
                 <h3 className="valor-title">TRANSPARENCIA</h3>
                 <p className="valor-text">
-                  Sabemos que la confianza se construye con información clara y acciones coherentes, compartimos qué pasa con los residuos, cómo los tratamos y por qué elegimos hacerlo así.
+                  Sabemos que la confianza se construye con información clara y acciones coherentes: compartimos qué pasa con los residuos, cómo los tratamos y por qué elegimos hacerlo así.
                 </p>
               </div>
 

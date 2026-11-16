@@ -76,12 +76,12 @@ export default function Servicios() {
           {/* Tarjeta Inscripción */}
           <div className="pricing-card">
             <div className="pricing-badge">
-              Inscripción $300 mxn
+              Inscripción $300 MXN
             </div>
             <div className="pricing-details">
               {/*columna izq del texto*/}
               <div className="pricing-column">
-                <span className="pricing-text">Kit de bievenida:</span>
+                <span className="pricing-text">Kit de bienvenida:</span>
                 <ul className="pricing-list">
                   <li>2 cubetas 19L</li>
                   <li>1 cubeta 4L</li>
@@ -101,12 +101,12 @@ export default function Servicios() {
           {/* Tarjeta Recolección */}
           <div className="pricing-card">
             <div className="pricing-badge">
-              Recolección $75 mxn
+              Recolección $75 MXN
             </div>
             <div className="pricing-details">
               {/*columna izq del texto*/}
               <div className="pricing-column">
-                <span className="pricing-text">Elige como pagar:</span>
+                <span className="pricing-text">Elige cómo pagar:</span>
                 <ul className="pricing-list">
                   <li>Semanal</li>
                   <li>Mensual</li>

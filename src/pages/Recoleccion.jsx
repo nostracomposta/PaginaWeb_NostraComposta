@@ -57,7 +57,7 @@ export default function Recoleccion() {
                 />
               </div>
               <div className="recommendation-text">
-                Mantén tu cubeta siempre cerrada, y si es posible, cubre tus residuos con materia seca, como ojas, periódico o cartón.
+                Mantén tu cubeta siempre cerrada, y si es posible, cubre tus residuos con materia seca, como hojas, periódico o cartón.
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function Recoleccion() {
 
       {/* SOLICITA TU RECOLECCIÓN & DÍA DE RECOLECCIÓN */}
       <section className="ready-bucket-section">
-       <h2 className="ready-bucket-title">¿Tu cubeta ya esta lista?</h2>
+       <h2 className="ready-bucket-title">¿Tu cubeta ya está lista?</h2>
        
       <section className="recoleccion-request-section">
         <a
@@ -366,7 +366,7 @@ export default function Recoleccion() {
               <div className="overlay-info-box">
                 <div className="info-box-left">
                   <p>
-                    Al finalizar, <strong>no olvides enviar tu formulario</strong>. Después, <strong>recibirás un primer correo confirmando tu solicitud</strong>. Con este podrás asegurarte que se realizó correctamente tu solicitud.
+                    Al finalizar, <strong>no olvides enviar tu formulario</strong>. Después, <strong>recibirás un primer correo confirmando tu solicitud</strong>. Con este podrás asegurarte de que se realizó correctamente tu solicitud.
                   </p>
                 </div>
                 <div className="info-box-right">
